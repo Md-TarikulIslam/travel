@@ -1,9 +1,10 @@
-import { Button } from '@material-tailwind/react'
+import {  RouterProvider } from 'react-router-dom'
+import router from './routes/Routes'
 
 function App() {
   return (
     <>
-      <Button>hi</Button>
+      <RouterProvider router={router}></RouterProvider>
     </>
   )
 }
