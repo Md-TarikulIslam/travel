@@ -45,7 +45,7 @@ export default function Header() {
         <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             <Typography
                 as="li"
-                variant="small"
+                variant="md"
                 color={navListColor}
                 className="p-1 font-normal"
             >
@@ -55,7 +55,7 @@ export default function Header() {
             </Typography>
             <Typography
                 as="li"
-                variant="small"
+                variant="md"
                color={navListColor}
                 className="p-1 font-normal"
             >
@@ -65,7 +65,7 @@ export default function Header() {
             </Typography>
             <Typography
                 as="li"
-                variant="small"
+                variant="md"
                color={navListColor}
                 className="p-1 font-normal"
             >
@@ -75,7 +75,7 @@ export default function Header() {
             </Typography>
             <Typography
                 as="li"
-                variant="small"
+                variant="md"
                color={navListColor}
                 className="p-1 font-normal"
             >
@@ -85,7 +85,7 @@ export default function Header() {
             </Typography>
             <Typography
                 as="li"
-                variant="small"
+                variant="md"
                color={navListColor}
                 className="p-1 font-normal"
             >

@@ -11,6 +11,10 @@ module.exports = withMT({
     extend: {
       fontFamily:{
         'Open Sans':['Open Sans','sans-serif']
+      },
+      letterSpacing: {
+        '2': '2px',
+        '6': '6px'
       }
     },
   },
