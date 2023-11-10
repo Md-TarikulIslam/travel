@@ -12,6 +12,7 @@ import logo from '../../assets/images/logo/logo.png'
 export default function Header() {
     const [openNav, setOpenNav] = React.useState(false);
     const [navbarColor, setNavbarColor] = React.useState("transparent");
+    const [navListColor, setNavListColor] = React.useState("white");
 
     React.useEffect(() => {
         window.addEventListener(
@@ -26,8 +27,10 @@ export default function Header() {
             const scrollPosition = window.scrollY;
             if (scrollPosition > 100) {
                 setNavbarColor("white");
+                setNavListColor("black");
             } else {
                 setNavbarColor("transparent");
+                setNavListColor("white");
             }
         };
 
@@ -43,7 +46,7 @@ export default function Header() {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
+                color={navListColor}
                 className="p-1 font-normal"
             >
                 <a href="#" className="flex items-center">
@@ -53,7 +56,7 @@ export default function Header() {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
+               color={navListColor}
                 className="p-1 font-normal"
             >
                 <a href="#" className="flex items-center">
@@ -63,7 +66,7 @@ export default function Header() {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
+               color={navListColor}
                 className="p-1 font-normal"
             >
                 <a href="#" className="flex items-center">
@@ -73,7 +76,7 @@ export default function Header() {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
+               color={navListColor}
                 className="p-1 font-normal"
             >
                 <a href="#" className="flex items-center">
@@ -83,7 +86,7 @@ export default function Header() {
             <Typography
                 as="li"
                 variant="small"
-                color="blue-gray"
+               color={navListColor}
                 className="p-1 font-normal"
             >
                 <a href="#" className="flex items-center">
@@ -95,8 +98,8 @@ export default function Header() {
 
     return (
 
-        <div className={`fixed top-0 z-50 shadow-none max-w-screen-3xl  mx-auto w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 transition-all duration-300 bg-${navbarColor}`}>
-            <div className="bg-transparent container max-w-screen-xl mx-auto flex items-center justify-between text-blue-gray-900 w-full">
+        <div className={`fixed top-0 z-50 shadow-none max-w-screen-3xl  mx-auto w-full rounded-none border-none px-4 py-2 lg:px-0 lg:py-2 transition-all duration-300 bg-${navbarColor}`}>
+            <div className="bg-transparent container max-w-screen-xl mx-auto flex items-center justify-between text-white-900 w-full">
                 <img className="w-16" src={logo} alt="" />
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{navList}</div>

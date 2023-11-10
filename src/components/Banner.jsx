@@ -9,6 +9,7 @@ const Banner = () => {
                 <p className='text-xl'>Let's travel the world</p>
                 <p className='text-4xl md:text-5xl lg:text-6xl text-center leading-normal font-bold lg:leading-normal tracking-widest'>Explore Patagonia With <br /> <span className='stroke'>Patagonia Explore</span></p>
             </div>
+            
         </div>
     )
 }
