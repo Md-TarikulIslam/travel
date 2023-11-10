@@ -104,9 +104,9 @@ export default function Header() {
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{navList}</div>
                     <Button
-                        color="red"
+                        color="blue"
                         size="sm"
-                        className="hidden lg:inline-block bg-red-500 tracking-widest"
+                        className="hidden lg:inline-block bg-[#1d355e] tracking-widest"
                     >
                         <span>Book now</span>
                     </Button>
@@ -152,7 +152,7 @@ export default function Header() {
             <MobileNav open={openNav}>
                 {navList}
 
-                <Button fullWidth color="red" size="sm" className="bg-red-500">
+                <Button fullWidth color="blue" size="sm" className="bg-[#1d355e]">
                     <span>Book now</span>
                 </Button>
             </MobileNav>
