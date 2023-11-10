@@ -94,8 +94,8 @@ export default function Header() {
 
     return (
 
-        <Navbar className={`fixed top-0 z-50 shadow-none max-w-screen-3xl  mx-auto w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 transition-all duration-300 bg-${navbarColor}`}>
-            <div className=" container max-w-screen-xl mx-auto flex items-center justify-between text-blue-gray-900 w-full">
+        <div className={`fixed top-0 z-50 shadow-none max-w-screen-3xl  mx-auto w-full rounded-none border-none px-4 py-2 lg:px-8 lg:py-4 transition-all duration-300 bg-${navbarColor}`}>
+            <div className="bg-transparent container max-w-screen-xl mx-auto flex items-center justify-between text-blue-gray-900 w-full">
                 <Typography
                     as="a"
                     href="#"
@@ -158,8 +158,6 @@ export default function Header() {
                     <span>Book now</span>
                 </Button>
             </MobileNav>
-        </Navbar>
-
-
+        </div>
     );
 }
