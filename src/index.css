@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.stroke{
+    color: transparent;
+    -webkit-text-stroke-color : red;
+    -webkit-text-stroke-width : 0.4mm;
+}
