@@ -99,13 +99,12 @@ export default function Header() {
     return (
 
         <div className={`fixed top-0 z-50 shadow-none max-w-screen-3xl  mx-auto w-full rounded-none border-none px-4 py-2 lg:px-0 lg:py-2 transition-all duration-300 bg-${navbarColor}`}>
-            <div className="bg-transparent container max-w-screen-xl mx-auto flex items-center justify-between text-white-900 w-full">
-                <img className="w-16" src={logo} alt="" />
-                <div className="flex items-center gap-4">
+            <div className="bg-transparent container max-width flex items-center justify-between text-white-900 w-full">
+                <img className="w-16" src={logo} alt="logo" />
                     <div className="mr-4 hidden lg:block">{navList}</div>
                     <Button
                         color="blue"
-                        size="sm"
+                        size="md"
                         className="hidden lg:inline-block bg-[#1d355e] tracking-widest"
                     >
                         <span>Book now</span>
@@ -147,12 +146,11 @@ export default function Header() {
                             </svg>
                         )}
                     </IconButton>
-                </div>
             </div>
             <MobileNav open={openNav}>
                 {navList}
 
-                <Button fullWidth color="blue" size="sm" className="bg-[#1d355e]">
+                <Button fullWidth color="blue" size="md" className="bg-[#1d355e]">
                     <span>Book now</span>
                 </Button>
             </MobileNav>

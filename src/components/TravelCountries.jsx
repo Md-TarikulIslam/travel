@@ -5,7 +5,7 @@ import { MdArrowRightAlt, MdOutlineLocationOn } from "react-icons/md";
 
 export default function TravelCountries() {
     return (
-        <div className="max-w-screen-xl mx-auto">
+            <div className="max-width">
             <p className="uppercase tracking-widest text-xs text-[#04afd1]">top destination</p>
             <p className="uppercase tracking-widest text-4xl font-bold text-[#04afd1] my-4">Travel <span className="text-[#1d355e]">countries</span></p>
             <Carousel  className="rounded-none h-full overflow-hidden group" prevArrow={false} nextArrow={false}  loop={true} autoplay={true} autoplayDelay={4000}>

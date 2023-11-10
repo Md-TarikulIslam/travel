@@ -3,8 +3,52 @@
 @tailwind utilities;
 
 
+@layer components {
+    .max-width {
+      @apply max-w-screen-xl mx-auto;
+    }
+  } 
+
+
 .stroke{
     color: transparent;
     -webkit-text-stroke-color : white;
     -webkit-text-stroke-width : 0.4mm;
+}
+
+
+
+
+.imgs {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    transition: .4s ease-in-out;
+}
+
+.imgs:hover {
+    transform: scale(.95);
+}
+
+.img::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 0;
+    left: 45px;
+    bottom: 0;
+    background-color: #2095AE;
+}
+
+
+.img::after {
+    content: '';
+    width: 50%;
+    position: absolute;
+    top: -6%;
+    bottom: 60%;
+    left: -3%;
+    background-image: url(/src/assets/images/shape/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
 }
