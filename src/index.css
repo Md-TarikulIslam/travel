@@ -73,3 +73,13 @@
     font-family: Kaushan-Regular ;
   }
   
+
+
+  .custom-next-arrow {
+    background-color: #007bff; /* Change background color */
+    color: white; /* Change icon color */
+    width: 40px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    border-radius: 50%; /* Add border radius */
+    cursor: pointer; /* Maintain clickable behavior */
+  }

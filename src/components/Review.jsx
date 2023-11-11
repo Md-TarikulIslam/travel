@@ -4,6 +4,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdStarRate } from 'react-ico
 import img from '../assets/images/review/1.jpeg'
 
 const Review = () => {
+   
     return (
         <div className='max-w-screen-xl mx-auto bg-[#19c3c2] h-[600px] lg:h-96 relative'>
             <div className='flex lg:flex-row flex-col'>
@@ -17,7 +18,7 @@ const Review = () => {
                 <div className='flex-1 absolute -bottom-16 z-10  lg:right-[32rem] mx-auto lg:mx-0 w-full md:w-0'>
                     <Card className='rounded-none h-[400px] lg:h-80 lg:w-[28rem] w-[20rem] mx-auto lg:mx-0 p-4'>
                         <CardBody>
-                            <Carousel className="rounded-none overflow-hidden h-60" >
+                            <Carousel className="rounded-none overflow-hidden lg:h-60 " nextArrow={false} prevArrow={false} navigation={false} loop={true} autoplay={true} autoplayDelay={2000}>
                                 <div>
                                     <p className='uppercase tracking-widest font-bold text-2xl'>Top reviews </p>
                                     <p className='font-bold text-lg mt-4'> Colorful India</p>
@@ -32,8 +33,8 @@ const Review = () => {
                                     <p className='text-sm my-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At reprehenderit impedit, sed voluptate autem nesciunt cum sunt minus voluptatibus ipsa voluptatum suscipit repellat </p>
                                     <div className='flex items-center justify-between'>
                                         <div className='flex items-center gap-4'>
-                                            <img className='w-14 h-14 rounded-full' src={img} alt="" />
-                                            <p className='font-semibold'>Avishek Kumar</p>
+                                            <img className='w-14 h-14 rounded-full ' src={img} alt="" />
+                                            <p className='font-semibold '>Avishek Kumar</p>
                                         </div>
 
                                     </div>
@@ -59,28 +60,7 @@ const Review = () => {
                                     </div>
                                 </div>
                             </Carousel>
-                            {/* <p className='uppercase tracking-widest font-bold text-2xl'>Top reviews</p>
-                        <p className='font-bold text-lg mt-4'> Colorful India</p>
-                        <div className='flex items-center gap-1 text-[#19c3c2]'>
-
-                        <MdStarRate />
-                        <MdStarRate />
-                        <MdStarRate />
-                        <MdStarRate />
-                        <MdStarRate />
-                        </div>
-                        <p className='text-sm my-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At reprehenderit impedit, sed voluptate autem nesciunt cum sunt minus voluptatibus ipsa voluptatum suscipit repellat </p>
-                        <div className='flex items-center justify-between'>
-                        <div className='flex items-center gap-4'>
-                            <img className='w-14 h-14 rounded-full' src={img} alt="" />
-                            <p className='font-semibold'>Avishek Kumar</p>
-                        </div>
-                        <div className='flex items-center gap-4'>
                             
-                            <MdKeyboardArrowLeft  className='text-2xl'/>
-                            <MdKeyboardArrowRight className='text-2xl'/>
-                        </div>
-                        </div> */}
                         </CardBody>
                     </Card>
                 </div>
