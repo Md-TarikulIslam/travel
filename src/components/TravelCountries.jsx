@@ -8,12 +8,12 @@ export default function TravelCountries() {
             <div className="max-width">
             <p className="uppercase tracking-widest text-xs text-[#04afd1]">top destination</p>
             <p className="uppercase tracking-widest text-4xl font-bold text-[#04afd1] my-4">Travel <span className="text-[#1d355e]">countries</span></p>
-            <Carousel  className="rounded-none h-full overflow-hidden group" prevArrow={false} nextArrow={false}  loop={true} autoplay={true} autoplayDelay={4000}>
-                <div className="flex items-center">
+            <Carousel  className="rounded-none h-full overflow-hidden group" prevArrow={false} nextArrow={false}  loop={true} autoplay={false} autoplayDelay={4000}>
+                <div className="flex lg:flex-row flex-col items-center">
                 <div className="z-20">
-                <img className="w-[45rem] h-[29rem] group-hover:scale-95 transition-all" src={img} alt="" />
+                <img className="w-[45rem] h-[40rem] lg:h-[29rem] lg:group-hover:scale-95 transition-all object-cover object-top" src={img} alt="" />
                 </div>
-                    <Card className="p-6 z-30 rounded-none absolute  right-10 h-[22rem] w-[30rem] ">
+                    <Card className="p-6 z-30 rounded-none absolute right-0 bottom-0 lg:bottom-12  lg:right-10 h-[23rem] w-[30rem] ">
                         <CardBody>
                             <p className="uppercase tracking-widest text-xs text-[#04afd1]">travel countries</p>
                             <p className="text-[#1d355e] font-bold text-3xl my-4">Argentina</p>
@@ -37,11 +37,11 @@ export default function TravelCountries() {
                         </CardBody>
                     </Card>
                 </div>
-                <div className="flex items-center flex-row-reverse">
+                <div className="flex items-center flex-col lg:flex-row-reverse">
                 <div>
-                <img className="w-[45rem] h-[29rem] group-hover:scale-95 transition-all" src={img2} alt="" />
+                <img className="w-[45rem] h-[40rem] lg:h-[29rem] lg:group-hover:scale-95 transition-all object-cover object-top" src={img2} alt="" />
                 </div>
-                    <Card className="p-6 rounded-none absolute  left-10 h-[22rem] w-[30rem] ">
+                    <Card className="p-6 rounded-none absolute bottom-0 lg:bottom-12 lg:left-10 h-[23rem] w-[30rem] ">
                         <CardBody>
                             <p className="uppercase tracking-widest text-xs text-[#04afd1]">travel countries</p>
                             <p className="text-[#1d355e] font-bold text-3xl my-4">Chile</p>

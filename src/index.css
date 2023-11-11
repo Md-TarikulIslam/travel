@@ -52,3 +52,15 @@
     background-repeat: repeat;
     z-index: -1;
 }
+
+@font-face {
+    font-family: "Quicksand-Regular";
+    src: local("Quicksand-Regular"),
+      url("./assets/fonts/Quicksand-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }
+
+  .quickSand{
+    font-family: Quicksand-Regular ;
+  }
+  
