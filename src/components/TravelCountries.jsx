@@ -18,7 +18,7 @@ export default function TravelCountries() {
                             <p className="uppercase tracking-widest text-xs text-[#04afd1]">travel countries</p>
                             <p className="text-[#1d355e] font-bold text-3xl my-4">Argentina</p>
                             <p className="text-[#848691] text-sm leading-loose">We provide you with interesting and exciting tours to different parts of the world. Orci varius natoque penatibus et magnis disney turien nascete ridiculus duru in the mus nellen.</p>
-                            <div className="grid grid-cols-3 my-4">
+                            <div className="grid grid-cols-3 sm:my-8 my-4 ">
                             <div>
                                 
                                 <p className="flex items-center gap-1 text-sm tracking-widest font-thin"><MdOutlineLocationOn className="text-[#04afd1] text-xl"/> Buenos Aires</p>
@@ -32,8 +32,10 @@ export default function TravelCountries() {
                                 <p className="flex items-center gap-1 text-sm tracking-widest font-thin"><MdOutlineLocationOn className="text-[#04afd1] text-xl"/> El Chalten</p>
                             </div>
                             </div>
-                            <p className="border-b border-black"></p>
-                            <p className="text-[#04afd1] flex items-center gap-2 mt-4 hover:underline  hover:underline-offset-4 delay-150 transition-all">View all places <MdArrowRightAlt /></p>
+                            {/* <p className="border-b border-black"></p> */}
+                           <div className="md:absolute lg:bottom-10 bottom-5">
+                           <p className="text-[#04afd1] flex items-center gap-2 mt-4 hover:underline  hover:underline-offset-4 delay-150 transition-all  ">View all places <MdArrowRightAlt /></p>
+                           </div>
                         </CardBody>
                     </Card>
                 </div>
@@ -45,8 +47,8 @@ export default function TravelCountries() {
                         <CardBody>
                             <p className="uppercase tracking-widest text-xs text-[#04afd1]">travel countries</p>
                             <p className="text-[#1d355e] font-bold text-3xl my-4">Chile</p>
-                            <p className="text-[#848691] text-sm leading-loose">We provide you with interesting and exciting tours to different parts of the world. Orci varius natoque penatibus et magnis disney turien nascete ridiculus duru in the mus nellen.</p>
-                            <div className="flex justify-between  my-4">
+                            <p className="text-[#848691] text-sm leading-loose">We provide you with interesting and exciting tours to different parts of the world. Orci varius natoque penatibus et.</p>
+                            <div className="flex justify-between  sm:my-6 my-4 ">
                             <div className="flex-1">
                                 
                                 <p className="flex items-center gap-1 text-sm tracking-widest font-thin"><MdOutlineLocationOn className="text-[#04afd1] text-xl"/> Santiago</p>
@@ -60,8 +62,10 @@ export default function TravelCountries() {
                                 <p className="flex items-start gap-1 text-sm tracking-widest font-thin"><MdOutlineLocationOn className="text-[#04afd1] text-xl"/> Torres Del Paine</p>
                             </div>
                             </div>
-                            <p className="border-b border-black"></p>
+                            {/* <p className="border-b border-black"></p> */}
+                            <div className="md:absolute lg:bottom-10 bottom-5">
                             <p className="text-[#04afd1] flex items-center gap-2 mt-4 hover:underline  hover:underline-offset-4 delay-150 transition-all">View all places <MdArrowRightAlt /></p>
+                            </div>
                         </CardBody>
                     </Card>
                 </div>

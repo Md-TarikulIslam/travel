@@ -13,24 +13,24 @@
 .stroke{
     color: transparent;
     -webkit-text-stroke-color : white;
-    -webkit-text-stroke-width : 0.8mm;
+    -webkit-text-stroke-width : 0.3mm;
 }
 
 
 
 
-.imgs {
+.img {
     position: relative;
     z-index: 2;
     background: transparent;
     transition: .4s ease-in-out;
 }
 
-.imgs:hover {
+.img:hover {
     transform: scale(.95);
 }
 
-.img::before {
+.img-box::before {
     content: '';
     position: absolute;
     top: 30px;
@@ -41,7 +41,7 @@
 }
 
 
-.img::after {
+.img-box::after {
     content: '';
     width: 50%;
     position: absolute;

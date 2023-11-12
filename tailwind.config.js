@@ -15,7 +15,8 @@ module.exports = withMT({
       letterSpacing: {
         '2': '2px',
         '6': '6px'
-      }
+      },
+      
     },
   },
   plugins: [],

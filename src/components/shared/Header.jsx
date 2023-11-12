@@ -150,7 +150,7 @@ export default function Header() {
             <MobileNav open={openNav}>
                 {navList}
 
-                <Button fullWidth color="blue" size="md" className="bg-[#1d355e]">
+                <Button fullWidth color="blue" size="md" className="bg-[#2095ae]">
                     <span>Book now</span>
                 </Button>
             </MobileNav>
