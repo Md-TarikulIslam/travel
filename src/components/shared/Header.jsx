@@ -122,6 +122,7 @@ export default function Header() {
                                 className="h-6 w-6"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
+                                color={navListColor}
                                 strokeWidth={2}
                             >
                                 <path
@@ -137,6 +138,7 @@ export default function Header() {
                                 fill="none"
                                 stroke="currentColor"
                                 strokeWidth={2}
+                                color={navListColor}
                             >
                                 <path
                                     strokeLinecap="round"
@@ -150,7 +152,7 @@ export default function Header() {
             <MobileNav open={openNav}>
                 {navList}
 
-                <Button fullWidth color="blue" size="md" className="bg-[#2095ae]">
+                <Button fullWidth color="blue" size="md" className="bg-[#1d355e]">
                     <span>Book now</span>
                 </Button>
             </MobileNav>
