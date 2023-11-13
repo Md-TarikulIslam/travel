@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-16 grid md:grid-cols-3 grid-cols-1 border-b border-b-[#ffffff1a] pb-16 sm:w-[80%] mx-auto ">
+        <div className="mt-16 grid md:grid-cols-3 grid-cols-1 border-b border-b-[#ffffff1a] pb-16 md:w-full sm:w-[80%] mx-auto ">
           <div>
             <img src={logo} alt="logo" width={100} />
             <p className="mt-6 text-[#ffffffcc] ">
