@@ -47,7 +47,7 @@ export default function Header() {
                 as="li"
                 variant="md"
                 color={navListColor}
-                className="p-1 font-normal"
+                className="p-1 font-normal hover:text-blue-600"
             >
                 <a href="#" className="flex items-center">
                     Home
@@ -57,7 +57,7 @@ export default function Header() {
                 as="li"
                 variant="md"
                color={navListColor}
-                className="p-1 font-normal"
+                className="p-1 font-normal hover:text-blue-600"
             >
                 <a href="#" className="flex items-center">
                     About
@@ -67,7 +67,7 @@ export default function Header() {
                 as="li"
                 variant="md"
                color={navListColor}
-                className="p-1 font-normal"
+                className="p-1 font-normal hover:text-blue-600"
             >
                 <a href="#" className="flex items-center">
                     Destination
@@ -77,7 +77,7 @@ export default function Header() {
                 as="li"
                 variant="md"
                color={navListColor}
-                className="p-1 font-normal"
+                className="p-1 font-normal hover:text-blue-600"
             >
                 <a href="#" className="flex items-center">
                     Gallery
@@ -87,7 +87,7 @@ export default function Header() {
                 as="li"
                 variant="md"
                color={navListColor}
-                className="p-1 font-normal"
+                className="p-1 font-normal hover:text-blue-600"
             >
                 <a href="#" className="flex items-center">
                     Contact
