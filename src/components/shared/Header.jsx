@@ -8,6 +8,7 @@ import {
 
 } from "@material-tailwind/react";
 import logo from '../../assets/images/logo/logo2.png'
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [openNav, setOpenNav] = React.useState(false);
@@ -49,9 +50,9 @@ export default function Header() {
                 color={navListColor}
                 className="p-1 font-normal hover:text-blue-600"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/" className="flex items-center">
                     Home
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -59,9 +60,9 @@ export default function Header() {
                color={navListColor}
                 className="p-1 font-normal hover:text-blue-600"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/about" className="flex items-center">
                     About
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -69,9 +70,9 @@ export default function Header() {
                color={navListColor}
                 className="p-1 font-normal hover:text-blue-600"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/destination" className="flex items-center">
                     Destination
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -79,9 +80,9 @@ export default function Header() {
                color={navListColor}
                 className="p-1 font-normal hover:text-blue-600"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/gallery" className="flex items-center">
                     Gallery
-                </a>
+                </Link>
             </Typography>
             <Typography
                 as="li"
@@ -89,9 +90,9 @@ export default function Header() {
                color={navListColor}
                 className="p-1 font-normal hover:text-blue-600"
             >
-                <a href="#" className="flex items-center">
+                <Link to="/contact" className="flex items-center">
                     Contact
-                </a>
+                </Link>
             </Typography>
         </ul>
     );
@@ -107,7 +108,7 @@ export default function Header() {
                         size="md"
                         className="hidden lg:inline-block bg-[#1d355e] tracking-widest"
                     >
-                        <span>Book now</span>
+                        <Link to='/login'>Book now</Link>
                     </Button>
                     <IconButton
                         variant="text"
