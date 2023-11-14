@@ -13,8 +13,8 @@ const LoginPage = () => {
       <div className={`container bg-white rounded-[30px] sm:mt-16 mt-5 shadow-lg relative overflow-hidden w-[768px] max-w-full min-h-[480px] mx-4 ${isContainerActive ? 'active' : ''} `}>
         <div className="absolute top-0 h-full transition-all duration-500 right-[100%] sm-right-0 sm:left-0 sm:w-[50%] w-[100%] opacity-0 z-[1] form-container  sign-up">
           <form className="bg-white flex items-center justify-center flex-col sm:px-10 px-5 h-full">
-            <h1 className="text-3xl font-semibold">Create Account</h1>
-            <p className="mt-2 sm:hidden block">Already have an account? <span onClick={signInButton} className="text-blue-500 cursor-pointer">Sign In</span></p>
+            <h1 className="text-3xl font-semibold text-black">Create Account</h1>
+            <p className="mt-2 sm:hidden block text-black">Already have an account? <span onClick={signInButton} className="text-blue-500 cursor-pointer">Sign In</span></p>
             <div className="social-icons my-5">
               <a href="#" className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10">
                 <i className="fa-brands fa-google-plus-g"></i>
@@ -27,7 +27,7 @@ const LoginPage = () => {
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
             </div>
-            <span className="text-[12px] mb-2">or use your email for registeration</span>
+            <span className="text-[12px] mb-2 text-black">or use your email for registeration</span>
             <input className='bg-[#eee] border-none my-2 py-2.5 px-3.5 text-[13px] rounded-lg w-full outline-none' type="text" placeholder="Name" />
             <input className='bg-[#eee] border-none my-2 py-2.5 px-3.5 text-[13px] rounded-lg w-full outline-none' type="email" placeholder="Email" />
             <input className='bg-[#eee] border-none my-2 py-2.5 px-3.5 text-[13px] rounded-lg w-full outline-none' type="password" placeholder="Password" />
