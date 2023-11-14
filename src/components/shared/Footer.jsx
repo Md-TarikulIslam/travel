@@ -11,7 +11,7 @@ import img3 from "../../assets/images/footer/3.jpg";
 import img4 from "../../assets/images/footer/4.jpg";
 import img5 from "../../assets/images/footer/5.jpg";
 import img6 from "../../assets/images/footer/6.jpg";
-import logo from "../../assets/images/logo/logo.png";
+import logo from "../../assets/images/logo/logo3.png";
 
 const Footer = () => {
   return (
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="mt-16 grid md:grid-cols-3 grid-cols-1 border-b border-b-[#ffffff1a] pb-16 md:w-full sm:w-[80%] mx-auto ">
           <div>
-            <img src={logo} alt="logo" width={100} />
+            <img src={logo} alt="logo" width={250} />
             <p className="mt-6 text-[#ffffffcc] ">
               Quisque imperdiet sapien porttito the bibendum sellentesque the
               commodo erat acar accumsa lobortis, enim diam the nesuen.
