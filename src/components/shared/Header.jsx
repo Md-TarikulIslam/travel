@@ -154,7 +154,7 @@ export default function Header() {
                 {navList}
 
                 <Button fullWidth color="blue" size="md" className="bg-[#1d355e]">
-                    <span>Book now</span>
+                <Link to='/login'>Book now</Link>
                 </Button>
             </MobileNav>
         </div>
