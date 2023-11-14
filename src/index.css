@@ -16,6 +16,10 @@
     -webkit-text-stroke-width : 0.3mm;
 }
 
+.active {
+    color: #1e88e5 ;
+}
+
 
 
 

@@ -10,7 +10,7 @@ const LoginPage = () => {
   };
   return (
     <section className="flex justify-center items-center h-[100vh] bg-gradient-to-r from-[#777698] to-[#3c849a]">
-      <div className={`container bg-white rounded-[30px] mt-16 shadow-lg relative overflow-hidden w-[768px] max-w-full min-h-[480px] mx-4 ${isContainerActive ? 'active' : ''} `}>
+      <div className={`container bg-white rounded-[30px] sm:mt-16 mt-5 shadow-lg relative overflow-hidden w-[768px] max-w-full min-h-[480px] mx-4 ${isContainerActive ? 'active' : ''} `}>
         <div className="absolute top-0 h-full transition-all duration-500 right-[100%] sm-right-0 sm:left-0 sm:w-[50%] w-[100%] opacity-0 z-[1] form-container  sign-up">
           <form className="bg-white flex items-center justify-center flex-col sm:px-10 px-5 h-full">
             <h1 className="text-3xl font-semibold">Create Account</h1>

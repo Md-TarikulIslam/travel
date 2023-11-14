@@ -5,7 +5,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo/logo2.png";
 
 export default function Header() {
@@ -40,56 +40,51 @@ export default function Header() {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className='mt-2 mb-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 lg:bg-transparent pl-3 lg:pl-0 lg:py-0 py-2'>
       <Typography
         as="li"
         variant="md"
-        color={navListColor}
-        className="p-1 font-normal hover:text-blue-600"
+        className=" p-1 font-normal hover:text-blue-600 duration-200"
       >
-        <Link to="/" className="flex items-center">
+        <NavLink to="/" className="flex items-center">
           Home
-        </Link>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
         variant="md"
-        color={navListColor}
-        className="p-1 font-normal hover:text-blue-600"
+        className="p-1 font-normal hover:text-blue-600 duration-200"
       >
-        <Link to="/about" className="flex items-center">
+        <NavLink to="/about" className="flex items-center">
           About
-        </Link>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
         variant="md"
-        color={navListColor}
-        className="p-1 font-normal hover:text-blue-600"
+        className="p-1 font-normal hover:text-blue-600 duration-200"
       >
-        <Link to="/destination" className="flex items-center">
+        <NavLink to="/destination" className="flex items-center">
           Destination
-        </Link>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
         variant="md"
-        color={navListColor}
-        className="p-1 font-normal hover:text-blue-600"
+        className="p-1 font-normal hover:text-blue-600 duration-200"
       >
-        <Link to="/gallery" className="flex items-center">
+        <NavLink to="/gallery" className="flex items-center">
           Gallery
-        </Link>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
         variant="md"
-        color={navListColor}
-        className="p-1 font-normal hover:text-blue-600"
+        className="p-1 font-normal hover:text-blue-600 duration-200"
       >
-        <Link to="/contact" className="flex items-center">
+        <NavLink to="/contact" className="flex items-center">
           Contact
-        </Link>
+        </NavLink>
       </Typography>
     </ul>
   );
@@ -99,18 +94,20 @@ export default function Header() {
       className={`fixed top-0 z-50 shadow-none max-w-screen-3xl  mx-auto w-full rounded-none border-none px-4 py-2 lg:px-0 lg:py-2 transition-all duration-300 bg-${navbarColor}`}
     >
       <div className="bg-transparent container max-width flex items-center justify-between text-white-900 w-full">
-        <img className="lg:w-48 w-36" src={logo} alt="logo" />
-        <div className="mr-4 hidden lg:block">{navList}</div>
+        <img className="lg:w-48 w-36 py-2" src={logo} alt="logo" />
+        <div className={`mr-4 hidden lg:block text-${navListColor}`}>{navList}</div>
+        <Link to="/login">
         <Button
           color="blue"
           size="md"
           className="hidden lg:inline-block bg-[#1d355e] tracking-widest"
         >
-          <Link to="/login">Book now</Link>
+         <span> Book now</span>
         </Button>
+        </Link>
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-8 w-8 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -118,8 +115,8 @@ export default function Header() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              className="h-6 w-6"
-              viewBox="0 0 24 24"
+              className="h-8 w-8"
+              viewBox="0 0 26 26"
               stroke="currentColor"
               color={navListColor}
               strokeWidth={2}
@@ -133,7 +130,8 @@ export default function Header() {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-8 w-8"
+              viewBox="0 0 26 26"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -148,7 +146,7 @@ export default function Header() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
+      <MobileNav open={openNav} className="text-black bg-white rounded-b-xl   ">
         {navList}
 
         <Link to="/login">
