@@ -173,3 +173,48 @@
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+
+
+/* card hover css  */
+
+.wrapper {
+	perspective: 1000px;
+}
+.single-card {
+	transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.25);
+	transform-style: preserve-3d;
+}
+.single-card:hover {
+	transform: rotateY(180deg);
+}
+.front, .back {
+	position: relative;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.front {
+	cursor: pointer;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-size: cover;
+	background-position: center center;
+}
+.back {
+	transform: rotateY(180deg);
+	position: absolute;
+	height: 450px;
+    width: 100%;
+	background: white;
+}
+.content {
+	padding-top: 25%;
+}
+.content h2 {
+	font-size: 35px;
+	margin: 0;
+	font-weight: 300;
+}
