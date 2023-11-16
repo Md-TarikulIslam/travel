@@ -6,6 +6,10 @@ import DestinationPage from "../pages/DestinationPage";
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import GalleryPage from "../pages/GalleryPage";
+import DashboardPage from "../pages/DashboardPage";
+import SubMain from "./SubMain";
+import DashProfile from "../components/DashProfile";
+import DashTransaction from "../components/DashTransaction";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +39,24 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <ContactPage />
+            },
+            {
+                path: '/dashboard',
+                element: <SubMain />,
+                children: [
+                    {
+                        path: '/dashboard/profile',
+                        element: <DashProfile />
+                    },
+                    {
+                        path: '/dashboard/transaction',
+                        element: <DashTransaction />
+                    },
+                    {
+                        path: '/dashboard/users',
+                        element: <DashTransaction />
+                    },
+                ]
             }
         ]
     }
