@@ -1,10 +1,11 @@
-import React from 'react';
 import GalleryBanner from '../components/GalleryBanner';
+import BookNowBanner from '../components/BookNowBanner';
 
 const GalleryPage = () => {
     return (
         <>
-           <GalleryBanner /> 
+           <GalleryBanner />
+           <BookNowBanner />
         </>
     );
 };

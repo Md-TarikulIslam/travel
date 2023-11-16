@@ -3,6 +3,7 @@ import DiscoverWorld from "../components/DiscoverWorld"
 import Review from "../components/Review"
 import PopularTours from "../components/PopularTours"
 import TravelCountries from "../components/TravelCountries"
+import BookNowBanner from "../components/BookNowBanner"
 
 const Homepage = () => {
   return (
@@ -17,6 +18,7 @@ const Homepage = () => {
       <div className="py-20 px-4">
         <TravelCountries />
       </div>
+      <BookNowBanner />
       <div className="py-40 px-4 bg-[#f4f5f8]">
         <Review />
       </div>

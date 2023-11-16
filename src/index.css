@@ -108,6 +108,11 @@ html {
     opacity: 0.5;
   }
 
+  .overlay-img {
+    background-image: url(/src/assets/images/shape/bg-line.png);
+    background-repeat: no-repeat;
+  }
+
 
 /* login page css */
 

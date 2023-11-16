@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { FaFacebookF, FaGoogle } from "react-icons/fa";
+
 const LoginPage = () => {
     const [isContainerActive, setIsContainerActive] = useState(false);
   const signUpButton = () => {
@@ -17,14 +19,10 @@ const LoginPage = () => {
             <p className="mt-2 sm:hidden block text-black">Already have an account? <span onClick={signInButton} className="text-blue-500 cursor-pointer">Sign In</span></p>
             <div className="social-icons my-5">
               <a href="#" className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10">
-                <i className="fa-brands fa-google-plus-g"></i>
+              <FaGoogle />
               </a>
               <a href="#" className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10">
-                <i className="fa-brands fa-facebook-f"></i>
-              </a>
-              
-              <a href="#" className="text-[#333] text-[13px] mt-3.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10">
-                <i className="fa-brands fa-linkedin-in"></i>
+              <FaFacebookF />
               </a>
             </div>
             <span className="text-[12px] mb-2 text-black">or use your email for registeration</span>
@@ -39,16 +37,13 @@ const LoginPage = () => {
             <h1 className="text-3xl font-semibold">Sign In</h1>
             <p className="mt-2 sm:hidden block">For create a new account? <span onClick={signUpButton} className="text-blue-500 cursor-pointer">Sign Up</span></p>
             <div className="social-icons my-5">
-              <a href="#" className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10">
-                <i className="fa-brands fa-google-plus-g"></i>
+              <a href="#" className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-2 w-10 h-10">
+                <FaGoogle />
               </a>
-              <a href="#" className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10">
-                <i className="fa-brands fa-facebook-f"></i>
+              <a href="#" className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-2 w-10 h-10">
+                <FaFacebookF />
               </a>
-              
-              <a href="#" className="text-[#333] text-[13px] mt-3.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10">
-                <i className="fa-brands fa-linkedin-in"></i>
-              </a>
+            
             </div>
             <span className="text-[12px] mb-2">or use your email password</span>
             <input className='bg-[#eee] border-none my-2 py-2.5 px-3.5 text-[13px] rounded-lg w-full outline-none' type="email" placeholder="Email" />
