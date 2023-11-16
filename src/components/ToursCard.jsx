@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { toursCardData } from "../constant/dummyData";
+
 import { Link } from "react-router-dom";
 
 import { BsClock } from "react-icons/bs";
@@ -7,21 +6,9 @@ import { VscLocation } from "react-icons/vsc";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { LuSmile } from "react-icons/lu";
 
-const ToursCard = () => {
-  const [toursData, setToursData] = useState(toursCardData);
-  return (
-    <section className="max-width">
-      <p className="text-[#2095ae] text-[13px] uppercase mb-1 tracking-[5px]">
-        Choose your place
-      </p>
-      <h1 className="text-[45px] leading-[1.3em] font-bold text-[#0f2454] mb-5">
-        POPULAR <span className="text-[#2095AE]">TOURS</span>
-      </h1>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 wrapper relative">
-        {toursData.map((data) => (
-          <div key={data.id} className="single-card relative">
-            {data.popularTour === true ? (
-              <>
+const ToursCard = ({data}) => {
+    return (
+        <div className="card relative">
                 <div className="front">
                     <img
                       className="min-h-[450px] max-h-[450px] w-full"
@@ -46,14 +33,8 @@ const ToursCard = () => {
                     </div>
                     <Link className="border-b border-b-blue-500 py-1 hover:text-blue-500 duration-300" to="#">Tour Details</Link>
                 </div>
-              </>
-            ) : ""
-            }
           </div>
-        ))}
-      </div>
-    </section>
-  );
+    );
 };
 
 export default ToursCard;

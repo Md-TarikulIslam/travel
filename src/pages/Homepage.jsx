@@ -1,7 +1,7 @@
 import Banner from "../components/Banner"
 import DiscoverWorld from "../components/DiscoverWorld"
 import Review from "../components/Review"
-import ToursCard from "../components/ToursCard"
+import PopularTours from "../components/PopularTours"
 import TravelCountries from "../components/TravelCountries"
 
 const Homepage = () => {
@@ -11,8 +11,8 @@ const Homepage = () => {
       <div className="pt-32 pb-20 px-4">
         <DiscoverWorld />
       </div>
-      <div className="py-20 px-4 bg-[#f4f5f8]">
-        <ToursCard />
+      <div className="py-20 px-4 bg-[#dce4f5]">
+        <PopularTours />
       </div>
       <div className="py-20 bg-[#f4f5f8] px-4">
         <TravelCountries />

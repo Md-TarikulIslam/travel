@@ -88,6 +88,17 @@
     cursor: pointer; /* Maintain clickable behavior */
   }
 
+  .bg_overlay::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #0f2454;
+    opacity: 0.3;
+  }
 
 
 /* login page css */
@@ -181,11 +192,11 @@
 .wrapper {
 	perspective: 1000px;
 }
-.single-card {
+.card {
 	transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.25);
 	transform-style: preserve-3d;
 }
-.single-card:hover {
+.card:hover {
 	transform: rotateY(180deg);
 }
 .front, .back {
