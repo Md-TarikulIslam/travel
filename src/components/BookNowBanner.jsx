@@ -12,7 +12,7 @@ const BookNowBanner = () => {
             Ready for an unforgetable tour?
           </h2>
         </div>
-        <button className="uppercase bg-[#313041] text-[12px] font-bold tracking-2 px-10 py-6 rounded-xl text-white">
+        <button className="uppercase bg-[#313041] text-[12px] font-bold tracking-2 md:px-10 md:py-6 px-6 py-4 rounded-xl text-white">
           <Link to='/destination'> Book tour now</Link>
         </button>
       </div>
