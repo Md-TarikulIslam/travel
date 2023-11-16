@@ -146,7 +146,7 @@ export default function Header() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav} className="text-black bg-white rounded-b-xl   ">
+      <MobileNav open={openNav} className="text-black bg-white rounded-b-xl">
         {navList}
 
         <Link to="/login">

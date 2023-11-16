@@ -67,7 +67,7 @@ const Review = () => {
                     <Card className='rounded-none h-[400px] lg:h-80 lg:w-[28rem] w-[20rem] mx-auto lg:mx-0 p-4'>
                         <CardBody>
                               <div>
-                            <Carousel className="rounded-none overflow-hidden lg:h-60 " nextArrow={false} prevArrow={false} navigation={false} loop={true} autoplay={true} autoplayDelay={2000}>
+                            <Carousel className="rounded-none overflow-hidden lg:h-80 " nextArrow={false} prevArrow={false} navigation={false} loop={true} autoplay={true} autoplayDelay={2000}>
                                 {
                                     allData.map((data, index)=>{
                                         return(
@@ -88,7 +88,7 @@ const Review = () => {
                                     <p className='text-sm my-4'>{data.details} </p>
                                     <div className='flex items-center justify-between'>
                                         <div className='flex items-center gap-4'>
-                                            <img className='w-14 h-14 rounded-full ' src={data.img} alt="" />
+                                            <img className='w-12 h-12 rounded-full ' src={data.img} alt="" />
                                             <p className='font-semibold '>{data.name}</p>
                                         </div>
 

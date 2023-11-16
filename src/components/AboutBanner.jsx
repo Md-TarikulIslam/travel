@@ -1,6 +1,6 @@
 import img from "../assets/images/destination/destination.jpg";
 
-const DestinationBanner = () => {
+const AboutBanner = () => {
   return (
     <div className="relative bg-black">
       <div className=" bg_overlay">
@@ -10,16 +10,16 @@ const DestinationBanner = () => {
           alt="Banner Image"
         />
       </div>
-      <div className=" absolute z-10 top-48 2xl:left-52 text-white  px-4">
+      <div className=" absolute z-10 top-44 2xl:left-52 text-white  px-4">
         <p className="text-[13px] uppercase mb-1 tracking-[5px]">
-          Choose your place
+          The Best Travel Agency
         </p>
-        <h1 className="md:text-[48px] text-[40px] leading-[1.3em] font-bold mb-5 Kaushan">
-          Popular <span className="text-[#2095AE]">Destination</span>
+        <h1 className="md:text-[48px] text-[40px] leading-[1.3em] font-bold mb-5 Kaushan ">
+        We Helping You Find <br /><span className="text-[#2095AE]">Your Dream</span> Vacation
         </h1>
       </div>
     </div>
   );
 };
 
-export default DestinationBanner;
+export default AboutBanner;
