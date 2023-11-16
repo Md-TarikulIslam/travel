@@ -11,13 +11,13 @@ const Homepage = () => {
       <div className="pt-32 pb-20 px-4">
         <DiscoverWorld />
       </div>
-      <div className="py-20 px-4 bg-[#dce4f5]">
+      <div className="py-20 px-4 bg-[#f4f5f8]">
         <PopularTours />
       </div>
-      <div className="py-20 bg-[#f4f5f8] px-4">
+      <div className="py-20 px-4">
         <TravelCountries />
       </div>
-      <div className="py-40 px-4">
+      <div className="py-40 px-4 bg-[#f4f5f8]">
         <Review />
       </div>
     </div>

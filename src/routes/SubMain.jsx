@@ -1,4 +1,3 @@
-import React from 'react'
 import DashboardNav from '../components/DashboardNav'
 import { Outlet } from 'react-router-dom'
 
