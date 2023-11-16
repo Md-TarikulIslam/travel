@@ -94,7 +94,7 @@ export default function Header() {
       className={`fixed top-0 z-50 shadow-none max-w-screen-3xl  mx-auto w-full rounded-none border-none px-4 py-2 lg:px-0 lg:py-2 transition-all duration-300 bg-${navbarColor}`}
     >
       <div className="bg-transparent container max-width flex items-center justify-between text-white-900 w-full">
-        <img className="lg:w-48 w-36 py-2" src={logo} alt="logo" />
+        <Link to='/'><img className="lg:w-48 w-36 py-2" src={logo} alt="logo" /></Link>
         <div className={`mr-4 hidden lg:block text-${navListColor}`}>{navList}</div>
         <Link to="/login">
         <Button
