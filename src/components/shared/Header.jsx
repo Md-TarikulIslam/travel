@@ -1,5 +1,6 @@
 import {
   Button,
+  Collapse,
   IconButton,
   MobileNav,
   Typography,
@@ -146,7 +147,7 @@ export default function Header() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav} className="text-black bg-white rounded-b-xl">
+      <Collapse open={openNav} className="text-black bg-white rounded-xl">
         {navList}
 
         <Link to="/login">
@@ -154,7 +155,7 @@ export default function Header() {
             <span>Book now</span>
           </Button>
         </Link>
-      </MobileNav>
+      </Collapse>
     </div>
   );
 }

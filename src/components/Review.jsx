@@ -59,7 +59,8 @@ const Review = () => {
                 <div className='flex-1 absolute -top-20 md:right-40 lg:left-16 lg:mx-0 mx-auto w-full'>
                     <Card className=' rounded-none h-80 lg:w-[28rem] w-[20rem] mx-auto lg:mx-0'>
                         <CardBody className='p-0'>
-                            <img className='h-80 w-full object-cover' src="https://img.freepik.com/premium-photo/portrait-beautiful-indian-village-woman_987694-109.jpg" alt="" />
+                        <iframe className='w-full h-80' src="https://www.youtube.com/embed/WRdmk9799Y4?si=Gz2hPK8W8I_3ZCrI" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                  
                         </CardBody>
                     </Card>
                 </div>
