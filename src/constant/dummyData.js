@@ -1,8 +1,8 @@
-import img1 from '../assets/images/tours/1.jpg'
+import img1 from '../assets/images/tours/5.jpg'
 import img2 from '../assets/images/tours/2.jpg'
 import img3 from '../assets/images/tours/3.jpg'
 import img4 from '../assets/images/tours/4.jpg'
-import img5 from '../assets/images/tours/5.jpg'
+import img5 from '../assets/images/tours/1.jpg'
 import img6 from '../assets/images/tours/6.jpg'
 import img7 from '../assets/images/tours/6.jpg'
 import img8 from '../assets/images/tours/6.jpg'
@@ -11,20 +11,65 @@ export const toursCardData = [
     {
         id : 1,
         img : img1,
-        place : "Italy",
-        title : "Italy Tour",
-        expense : 1000,
-        desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
+        country : "Argentina",
+        title : "Glaciers & Peaks",
+        place : 'Buenos Aires, El Calafate, El Chaltén',
+        expense : 9816,
+        desq : `Venture into the heart of spectacular Patagonia, where vast stretches of natural beauty await your discovery`,
         day : 12,
         person : 12,
         ratings : '9.5 Superb',
         popularTour : true,
+        detailsdesq : [{
+            id: 1,
+            desq1 : "hello from timeline 1"
+        },
+        {
+            id: 2,
+            desq1 : "hello from timeline 2"
+        },
+        {
+            id: 3,
+            desq1 : "hello from timeline 2"
+        },
+        {
+            id: 4,
+            desq1 : "hello from timeline 2"
+        },
+        {
+            id: 5,
+            desq1 : "hello from timeline 3"
+        }],
+        details : 
+            {
+                duration : '5 Days 4 Nights',
+                details : `hello`,
+                departure : 'NYC International Airport',
+                departureTime : '7.00AM',
+                ReturnTime : "9.30PM",
+                // priceIncludes : [
+                //     Accommondation, Porter & Personal Guide,  Insurance, Breakfast, Tranportation / Car
+                // ],
+                // priceExcludes : [
+                //     Flights , Lunch ,Typical Souvenir , Sunscreen, toiletries and personal items
+                // ],
+                imgGallery : [
+                    {
+                        img1 : img1,
+                        img2 : img2,
+                        img3 : img3
+                    }
+                ]
+
+            }
+
     },
     {
         id : 2,
         img : img2,
-        place : "France",
+        country : "France",
         title : "France Tour",
+        place : 'Buenos Aires, El Calafate, El Chaltén',
         expense : 1200,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 15,
@@ -35,8 +80,9 @@ export const toursCardData = [
     {
         id : 3,
         img : img3,
-        place : "Italy",
+        country : "Italy",
         title : "Italy Tour",
+        place : 'Buenos Aires, El Calafate, El Chaltén',
         expense : 500,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 30,
@@ -47,8 +93,9 @@ export const toursCardData = [
     {
         id : 4,
         img : img4,
-        place : "Italy",
+        country : "Bangladesh",
         title : "Italy Tour",
+        place : 'Buenos Aires, El Calafate, El Chaltén',
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
@@ -59,8 +106,9 @@ export const toursCardData = [
     {
         id : 5,
         img : img5,
-        place : "Italy",
+        country : "Netherlands",
         title : "Italy Tour",
+        place : 'Buenos Aires, El Calafate, El Chaltén',
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
@@ -71,8 +119,9 @@ export const toursCardData = [
     {
         id : 6,
         img : img6,
-        place : "Italy",
+        country : "USA",
         title : "Italy Tour",
+        place : 'Buenos Aires, El Calafate, El Chaltén',
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
@@ -83,8 +132,9 @@ export const toursCardData = [
     {
         id : 7,
         img : img7,
-        place : "Italy",
+        country : "India",
         title : "Italy Tour",
+        place : 'Buenos Aires, El Calafate, El Chaltén',
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
@@ -95,8 +145,9 @@ export const toursCardData = [
     {
         id : 8,
         img : img8,
-        place : "Italy",
+        country : "UK",
         title : "Italy Tour",
+        place : 'Buenos Aires, El Calafate, El Chaltén',
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
