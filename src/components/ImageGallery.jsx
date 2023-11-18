@@ -33,10 +33,10 @@ const ImageGallery = () => {
                 </div>
             </div>
             <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
-               <div className='flex-1 max-h-[450px] overflow-hidden bg-black'>
+               <div className='flex-1 max-h-[400px] overflow-hidden bg-black'>
                <img className='hover:scale-105 hover:opacity-90 duration-300' src={img4} alt="" />
                </div>
-                <div className='flex-1 max-h-[450px] overflow-hidden bg-black'>
+                <div className='flex-1 max-h-[400px] overflow-hidden bg-black'>
                 <img className='hover:scale-105 hover:opacity-90 duration-300' src={img5} alt="" />
                 </div>
             </div>
@@ -53,10 +53,10 @@ const ImageGallery = () => {
             </div>
             
             <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
-               <div className='flex-1 max-h-[450px] overflow-hidden bg-black'>
+               <div className='flex-1 max-h-[400px] overflow-hidden bg-black'>
                <img className='hover:scale-105 hover:opacity-90 duration-300' src={img9} alt="" />
                </div>
-                <div className='flex-1 max-h-[450px] overflow-hidden bg-black'>
+                <div className='flex-1 max-h-[400px] overflow-hidden bg-black'>
                 <img className='hover:scale-110 scale-105 hover:opacity-90 duration-300' src={img10} alt="" />
                 </div>
             </div>
@@ -72,10 +72,10 @@ const ImageGallery = () => {
                 </div>
             </div>
             <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
-               <div className='flex-1 max-h-[450px] overflow-hidden bg-black'>
+               <div className='flex-1 max-h-[400px] overflow-hidden bg-black'>
                <img className='hover:scale-105 hover:opacity-90 duration-300' src={img14} alt="" />
                </div>
-                <div className='flex-1 max-h-[450px] overflow-hidden bg-black'>
+                <div className='flex-1 max-h-[400px] overflow-hidden bg-black'>
                 <img className='hover:scale-110 scale-105 hover:opacity-90 duration-300' src={img15} alt="" />
                 </div>
             </div>
@@ -91,10 +91,10 @@ const ImageGallery = () => {
                 </div>
             </div>
             <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
-               <div className='flex-1 max-h-[450px] overflow-hidden bg-black'>
+               <div className='flex-1 max-h-[400px] overflow-hidden bg-black'>
                <img className='hover:scale-105 hover:opacity-90 duration-300' src={img19} alt="" />
                </div>
-                <div className='flex-1 max-h-[450px] overflow-hidden bg-black'>
+                <div className='flex-1 max-h-[400px] overflow-hidden bg-black'>
                 <img className='hover:scale-110 scale-105 hover:opacity-90 duration-300' src={img20} alt="" />
                 </div>
             </div>
