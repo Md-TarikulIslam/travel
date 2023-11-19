@@ -51,7 +51,7 @@ const allData =[
     },
 ]
 
-const Review = () => {
+const  Review = () => {
    
     return (
         <div className='max-w-screen-xl mx-auto bg-[#19c3c2] h-[600px] lg:h-96 relative'>
@@ -110,3 +110,5 @@ const Review = () => {
         </div>
     )
 }
+
+export default Review;
