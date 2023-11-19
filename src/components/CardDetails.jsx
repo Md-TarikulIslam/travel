@@ -1,3 +1,4 @@
+import { Input } from "@material-tailwind/react";
 import { BsClock } from "react-icons/bs";
 import { LuSmile } from "react-icons/lu";
 import { MdOutlinePersonOutline } from "react-icons/md";
@@ -60,11 +61,11 @@ const CardDetails = ({ details }) => {
         <div className="md:w-[35%]">
                 <h1 className="text-center bg-[#2095ae] text-white h-20 text-[27px] font-semibold leading-[80px]">Form <span className="ml-10">${details?.expense}</span></h1>
                 <form className="bg-[#f4f5f8] px-6 py-11">
-                    <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-black" type="text" placeholder="Full Name" />
-                    <input className="outline-none p-5 mb-6 border-none text-[16px] w-full text-black placeholder:text-black" type="email" name="" id="" placeholder="Email Address"/>
-                    <input className="outline-none p-5 block border-none text-[16px] w-full mb-6 text-black placeholder:text-black bg-white" type="date"/>
-                    <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-black" type="text" placeholder="People" />
-                    <textarea className="outline-none block w-full resize-non overflow-hidden p-5  border-none text-[16px] text-black mb-6 placeholder:text-black" placeholder="Your Enquiry" cols={20} rows={4} ></textarea>
+                    <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="Full Name" />
+                    <input className="outline-none p-5 mb-6 border-none text-[16px] w-full text-black placeholder:text-[#455a64]" type="email" name="" id="" placeholder="Email Address"/>
+                    <input type="date" className=" p-5  border-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
+                    <input className="outline-none p-5 mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="People" />
+                    <textarea className="outline-none block w-full resize-non overflow-hidden p-5  border-none text-[16px] text-black mb-6 placeholder:text-[#455a64]" placeholder="Your Enquiry" cols={20} rows={4} ></textarea>
                     <button className="px-5 py-3 bg-[#2095ae] hover:bg-white hover:text-[#2095ae] text-white duration-300 border border-transparent hover:border-[#2095ae]">
                         <Link href="#">Book Now</Link>
                     </button>
