@@ -2,243 +2,243 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400&family=Poppins:wght@500;600;700;800&display=swap");
 
 @layer components {
-    .max-width {
-      @apply max-w-screen-xl mx-auto;
-    }
-  } 
+  .max-width {
+    @apply max-w-screen-xl mx-auto;
+  }
+}
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-.stroke{
-    color: transparent;
-    -webkit-text-stroke-color : white;
-    -webkit-text-stroke-width : 0.3mm;
+h1,h2,h3{
+  font-family: "Poppins", sans-serif;
+}
+
+p,h5,h6 {
+  font-family: "Barlow", sans-serif;
+}
+
+.stroke {
+  color: transparent;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 0.3mm;
 }
 
 .active {
-    color: #1e88e5 ;
+  color: #1e88e5;
 }
 
-
-
-
 .img {
-    position: relative;
-    z-index: 2;
-    background: transparent;
-    transition: .4s ease-in-out;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  transition: 0.4s ease-in-out;
 }
 
 .img:hover {
-    transform: scale(.95);
+  transform: scale(0.95);
 }
 
 .img-box::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    right: 0;
-    left: 45px;
-    bottom: 0;
-    background-color: #2095AE;
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  left: 45px;
+  bottom: 0;
+  background-color: #2095ae;
 }
-
 
 .img-box::after {
-    content: '';
-    width: 50%;
-    position: absolute;
-    top: -6%;
-    bottom: 60%;
-    left: -3%;
-    background-image: url(/src/assets/images/shape/dots.png);
-    background-repeat: repeat;
-    z-index: -1;
+  content: "";
+  width: 50%;
+  position: absolute;
+  top: -6%;
+  bottom: 60%;
+  left: -3%;
+  background-image: url(/src/assets/images/shape/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
 }
 
 @font-face {
-    font-family: "Quicksand-Regular";
-    src: local("Quicksand-Regular"),
-      url("./assets/fonts/Quicksand-Regular.ttf") format("truetype");
-    font-weight: normal;
-  }
+  font-family: "Quicksand-Regular";
+  src: local("Quicksand-Regular"),
+    url("./assets/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
 @font-face {
-    font-family: "Kaushan-Regular";
-    src: local("Kaushan-Regular"),
-      url("./assets/fonts/KaushanScript-Regular.ttf") format("truetype");
-    font-weight: normal;
-  }
+  font-family: "Kaushan-Regular";
+  src: local("Kaushan-Regular"),
+    url("./assets/fonts/KaushanScript-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
 
-  .quickSand{
-    font-family: Quicksand-Regular ;
-  }
-  .Kaushan{
-    font-family: Kaushan-Regular ;
-  }
-  
+.quickSand {
+  font-family: Quicksand-Regular;
+}
+.Kaushan {
+  font-family: Kaushan-Regular;
+}
 
+.custom-next-arrow {
+  background-color: #007bff; /* Change background color */
+  color: white; /* Change icon color */
+  width: 40px; /* Adjust width */
+  height: 40px; /* Adjust height */
+  border-radius: 50%; /* Add border radius */
+  cursor: pointer; /* Maintain clickable behavior */
+}
 
-  .custom-next-arrow {
-    background-color: #007bff; /* Change background color */
-    color: white; /* Change icon color */
-    width: 40px; /* Adjust width */
-    height: 40px; /* Adjust height */
-    border-radius: 50%; /* Add border radius */
-    cursor: pointer; /* Maintain clickable behavior */
-  }
+.bg_overlay2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #0f2454;
+  opacity: 0.2;
+}
 
-  .bg_overlay::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: #0f2454;
-    opacity: 0.5;
-  }
+.bg_overlay::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #0f2454;
+  opacity: 0.6;
+}
 
-  .overlay-img {
-    background-image: url(/src/assets/images/shape/bg-line.png);
-    background-repeat: no-repeat;
-  }
-
+.overlay-img {
+  background-image: url(/src/assets/images/shape/bg-line.png);
+  background-repeat: no-repeat;
+}
 
 /* login page css */
 
-
-.container.active .sign-in{
-    transform: translateX(100%);
+.container.active .sign-in {
+  transform: translateX(100%);
 }
 
+.container.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
 
-
-.container.active .sign-up{
-    transform: translateX(100%);
+@keyframes move {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
     opacity: 1;
     z-index: 5;
-    animation: move 0.6s;
+  }
 }
 
-@keyframes move{
-    0%, 49.99%{
-        opacity: 0;
-        z-index: 1;
-    }
-    50%, 100%{
-        opacity: 1;
-        z-index: 5;
-    }
+.toggle-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border-radius: 150px 0 0 100px;
+  z-index: 20;
 }
 
-
-
-.toggle-container{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.6s ease-in-out;
-    border-radius: 150px 0 0 100px;
-    z-index: 20;
+.container.active .toggle-container {
+  transform: translateX(-100%);
+  border-radius: 0 150px 100px 0;
 }
 
-.container.active .toggle-container{
-    transform: translateX(-100%);
-    border-radius: 0 150px 100px 0;
+.container.active .toggle {
+  transform: translateX(50%);
 }
 
-
-
-.container.active .toggle{
-    transform: translateX(50%);
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
 }
 
-.toggle-panel{
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 30px;
-    text-align: center;
-    top: 0;
-    transform: translateX(0);
-    transition: all 0.6s ease-in-out;
+.toggle-left {
+  transform: translateX(-200%);
 }
 
-.toggle-left{
-    transform: translateX(-200%);
+.container.active .toggle-left {
+  transform: translateX(0);
 }
 
-.container.active .toggle-left{
-    transform: translateX(0);
+.toggle-right {
+  right: 0;
+  transform: translateX(0);
 }
 
-.toggle-right{
-    right: 0;
-    transform: translateX(0);
+.container.active .toggle-right {
+  transform: translateX(200%);
 }
-
-.container.active .toggle-right{
-    transform: translateX(200%);
-}
-
-
 
 /* card hover css  */
 
 .wrapper {
-	perspective: 1000px;
+  perspective: 1000px;
 }
 .card {
-	transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.25);
-	transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.25);
+  transform-style: preserve-3d;
 }
 .card:hover {
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-.front, .back {
-	position: relative;
-	top: 0;
-	left: 0;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+.front,
+.back {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .front {
-	cursor: pointer;
-	height: 100%;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	background-size: cover;
-	background-position: center center;
+  cursor: pointer;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
 }
 .back {
-	transform: rotateY(180deg);
-	position: absolute;
-	height: 450px;
-    width: 100%;
-	background: white;
-}
-.content {
-	padding-top: 25%;
-}
-.content h2 {
-	font-size: 35px;
-	margin: 0;
-	font-weight: 300;
+  transform: rotateY(180deg);
+  position: absolute;
+  height: 450px;
+  width: 100%;
+  background: white;
 }

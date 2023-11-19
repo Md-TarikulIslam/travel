@@ -2,7 +2,7 @@ import img1 from '../assets/images/tours/5.jpg'
 import img2 from '../assets/images/tours/2.jpg'
 import img3 from '../assets/images/tours/3.jpg'
 import img4 from '../assets/images/tours/4.jpg'
-import img5 from '../assets/images/tours/1.jpg'
+import img5 from '../assets/images/gallery/2.jpg'
 import img6 from '../assets/images/tours/6.jpg'
 import img7 from '../assets/images/tours/6.jpg'
 import img8 from '../assets/images/tours/6.jpg'
@@ -17,6 +17,7 @@ export const toursCardData = [
         expense : 9816,
         desq : `Venture into the heart of spectacular Patagonia, where vast stretches of natural beauty await your discovery`,
         day : 12,
+        night : 11,
         person : 12,
         ratings : '9.5 Superb',
         popularTour : true,
@@ -55,9 +56,16 @@ export const toursCardData = [
                 // ],
                 imgGallery : [
                     {
-                        img1 : img1,
-                        img2 : img2,
-                        img3 : img3
+                        id : 1,
+                        img : img1
+                    },
+                    {
+                        id : 2,
+                        img : img2
+                    },
+                    {
+                        id : 3,
+                        img : img3
                     }
                 ]
 
@@ -73,6 +81,7 @@ export const toursCardData = [
         expense : 1200,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 15,
+        night : 11,
         person : 15,
         ratings : '9.2 Superb',
         popularTour : true,
@@ -86,6 +95,7 @@ export const toursCardData = [
         expense : 500,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 30,
+        night : 11,
         person : 6,
         ratings : '8.0 Impressive',
         popularTour : true,
@@ -99,6 +109,7 @@ export const toursCardData = [
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
+        night : 11,
         person : 12,
         ratings : '9.5 Superb',
         popularTour : true,
@@ -112,6 +123,7 @@ export const toursCardData = [
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
+        night : 11,
         person : 12,
         ratings : '9.5 Superb',
         popularTour : true,
@@ -125,6 +137,7 @@ export const toursCardData = [
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
+        night : 11,
         person : 12,
         ratings : '9.5 Superb',
         popularTour : true,
@@ -138,6 +151,7 @@ export const toursCardData = [
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
+        night : 11,
         person : 12,
         ratings : '9.5 Superb',
         popularTour : false,
@@ -151,6 +165,7 @@ export const toursCardData = [
         expense : 1000,
         desq : `Travel non lorem ac erat susce bibendum nulla facilisi. Sedeuter nunc voluat miss conse viventa amet vestibulum.`,
         day : 12,
+        night : 11,
         person : 12,
         ratings : '9.5 Superb',
         popularTour : false,

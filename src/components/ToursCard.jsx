@@ -9,20 +9,20 @@ import { LuSmile } from "react-icons/lu";
 const ToursCard = ({data}) => {
     const navigate = useNavigate();
     return (
-        <div className="card relative">
-                <div className="front">
+        <div className="card relative ">
+                <div className="front bg_overlay2">
                     <img
-                      className="min-h-[450px] max-h-[450px] w-full"
+                      className="min-h-[450px] max-h-[450px] w-full "
                       src={data.img}
                       alt="image"
                     />
-                  {/* <p className='bg-[#0f2454]  text-[13px] text-white absolute top-[35px] right-[15px] -rotate-90 px-2 py-1.5 uppercase text-center'>{data.place}</p> */}
-                  <div className="absolute bottom-0 right-0 text-right p-10">
+                  <p className='bg-[#0f2454]  text-[13px] text-white absolute top-[30px] left-[30px]  px-2 py-1.5 uppercase text-center z-10'>{data.country}</p>
+                  <div className="absolute bottom-0 right-0 text-right p-10 z-10">
                   <h2 className="text-[27px]  text-white mb-2.5 font-semibold inline-flex">{data.title}</h2>
                   <h6 className="text-[16px] text-white">${data.expense} / per persons</h6>
                   </div>
                   </div>
-                <div className="back flex flex-col justify-center items-start px-8">
+                <div className="back flex z-10 flex-col justify-center items-start px-8">
                     <h2 className="text-[27px] text-[#0f2454] font-semibold">{data.title}</h2>
                     <h5 className="text-[16px] text-black mb-1.5">{data.place}</h5>
                     <h6 className="text-[#2095AE] text-[16px] mb-5">${data.expense} / per persons</h6>

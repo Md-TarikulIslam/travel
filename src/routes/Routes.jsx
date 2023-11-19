@@ -10,7 +10,7 @@ import DashboardPage from "../pages/DashboardPage";
 import SubMain from "./SubMain";
 import DashProfile from "../components/DashProfile";
 import DashTransaction from "../components/DashTransaction";
-import CardDetails from "../pages/CardDetails";
+import CardDetailsPage from "../pages/CardDetailsPage";
 
 const router = createBrowserRouter([
     {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/destination/:id',
-                element: <CardDetails />
+                element: <CardDetailsPage />
             },
             {
                 path: '/gallery',
