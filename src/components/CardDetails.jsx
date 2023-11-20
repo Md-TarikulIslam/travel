@@ -3,6 +3,7 @@ import { BsClock } from "react-icons/bs";
 import { LuSmile } from "react-icons/lu";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { VscLocation } from "react-icons/vsc";
+import { IoCalendarNumberSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const CardDetails = ({ details }) => {
@@ -63,7 +64,10 @@ const CardDetails = ({ details }) => {
                 <form className="bg-[#f4f5f8] px-6 py-11">
                     <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="Full Name" />
                     <input className="outline-none p-5 mb-6 border-none text-[16px] w-full text-black placeholder:text-[#455a64]" type="email" name="" id="" placeholder="Email Address"/>
-                    <input type="date" className=" p-5  border-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
+                    <div className="relative">
+                      <IoCalendarNumberSharp size={20} className="sm:hidden absolute top-[25%] right-10"/>
+                    <input type="date" placeholder="Choose Your Date" className=" p-5  border-none outline-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
+                    </div>
                     <input className="outline-none p-5 mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="People" />
                     <textarea className="outline-none block w-full resize-non overflow-hidden p-5  border-none text-[16px] text-black mb-6 placeholder:text-[#455a64]" placeholder="Your Enquiry" cols={20} rows={4} ></textarea>
                     <button className="px-5 py-3 bg-[#2095ae] hover:bg-white hover:text-[#2095ae] text-white duration-300 border border-transparent hover:border-[#2095ae]">
