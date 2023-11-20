@@ -104,7 +104,7 @@ export const toursCardData = [
         },
         {
           id: 3,
-          title: "Day 3 - Flight to Iguazu  ( Brasilian Side)",
+          title: "Day 3 - Flight to Iguazu  (Brasilian Side)",
           desq: [
               "10 AM - transport after hotel breakfast",
               "Walking tour : Recoleta Cemetery and  neighborhood",
@@ -120,7 +120,7 @@ export const toursCardData = [
         },
         {
           id: 4,
-          title: "Day 4 - Flight to Iguazu  ( Argentinean  side)",
+          title: "Day 4 - Flight to Iguazu  (Argentinean  side)",
           desq: [
               "10 AM - transport after hotel breakfast",
               "Walking tour : Recoleta Cemetery and  neighborhood",
@@ -240,7 +240,7 @@ export const toursCardData = [
         },
         {
           id: 3,
-          title: "Day 3 - Flight to Iguazu  ( Brasilian Side)",
+          title: "Day 3 - Flight to Iguazu  (Brasilian Side)",
           desq: [
               "10 AM - transport after hotel breakfast",
               "Walking tour : Recoleta Cemetery and  neighborhood",
@@ -256,7 +256,7 @@ export const toursCardData = [
         },
         {
           id: 4,
-          title: "Day 4 - Flight to Iguazu  ( Argentinean  side)",
+          title: "Day 4 - Flight to Iguazu  (Argentinean  side)",
           desq: [
               "10 AM - transport after hotel breakfast",
               "Walking tour : Recoleta Cemetery and  neighborhood",
@@ -372,7 +372,7 @@ export const toursCardData = [
       },
       {
         id: 3,
-        title: "Day 3 - Flight to Iguazu  ( Brasilian Side)",
+        title: "Day 3 - Flight to Iguazu  (Brasilian Side)",
         desq: [
             "10 AM - transport after hotel breakfast",
             "Walking tour : Recoleta Cemetery and  neighborhood",
@@ -388,7 +388,7 @@ export const toursCardData = [
       },
       {
         id: 4,
-        title: "Day 4 - Flight to Iguazu  ( Argentinean  side)",
+        title: "Day 4 - Flight to Iguazu  (Argentinean  side)",
         desq: [
             "10 AM - transport after hotel breakfast",
             "Walking tour : Recoleta Cemetery and  neighborhood",

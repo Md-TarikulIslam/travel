@@ -24,7 +24,7 @@ const CardDetails = ({ details }) => {
           <p className="text-[#2095ae] text-[13px] uppercase mb-1 tracking-[2px] sm:tracking-[5px]">
             Travel With Patagonia Explore
           </p>
-          <h1 className="text-[45px] leading-[1.2em] font-bold text-[#0f2454] mb-2">
+          <h1 className="text-3xl sm:text-[45px] leading-[1.2em] font-bold text-[#0f2454] mb-2">
             {details?.title},
             <span className="text-[#2095AE]"> {details?.country}</span>
           </h1>
@@ -47,7 +47,7 @@ const CardDetails = ({ details }) => {
               {details?.ratings}
             </p>
           </div>
-          <h3 className="font-semibold mb-5 text-[#0f2454] text-[28px]">
+          <h3 className="font-semibold mb-5 text-[#0f2454] sm:text-[28px] text-2xl ">
             Information
           </h3>
           <p className="text-[#676977] md:w-[90%] leading-[1.75em] text-justify">{details?.details?.desq1}</p>
@@ -99,9 +99,9 @@ const CardDetails = ({ details }) => {
             </div>
       </div>
 
-      {/* itenary  */}
+      {/* itinerary  */}
       <div className="mt-20">
-      <h3 className="font-semibold mb-12 text-[#0f2454] text-[28px]">
+      <h3 className="font-semibold mb-12 text-[#0f2454] sm:text-[28px] text-2xl ">
             Full Itinerary :
           </h3>
       <Timeline className="sm:ml-10 grid md:grid-cols-2">
@@ -110,7 +110,7 @@ const CardDetails = ({ details }) => {
          <TimelineConnector />
          <TimelineHeader className="h-3">
            <TimelineIcon />
-           <Typography variant="h6" color="blue-gray" className="leading-none text-2xl text-[#2095ae]">
+           <Typography variant="h6" color="blue-gray" className="leading-none sm:text-2xl text-xl text-[#2095ae]">
              {data.title}
            </Typography>
          </TimelineHeader>
@@ -128,7 +128,7 @@ const CardDetails = ({ details }) => {
 
       {details?.details?.imgGallery ? (
         <div className="mt-10">
-          <h3 className="font-semibold mb-7 text-[#0f2454] text-[28px]">
+          <h3 className="font-semibold mb-7 text-[#0f2454] sm:text-[28px] text-2xl ">
             Tour Gallery
           </h3>
           <div className="grid md:grid-cols-5 gap-6">
