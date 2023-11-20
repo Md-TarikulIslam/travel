@@ -65,7 +65,10 @@ const CardDetails = ({ details }) => {
                     <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="Full Name" />
                     <input className="outline-none p-5 mb-6 border-none text-[16px] w-full text-black placeholder:text-[#455a64]" type="email" name="" id="" placeholder="Email Address"/>
                     <div className="relative">
-                      <IoCalendarNumberSharp size={20} className="sm:hidden absolute top-[25%] right-10"/>
+                     <div className="sm:hidden absolute top-[25%] w-full px-5 flex justify-between">
+                      <span className="text-[#455a64]">Pick Your Day</span>
+                     <IoCalendarNumberSharp size={20} color="#2095ae"/>
+                     </div>
                     <input type="date" placeholder="Choose Your Date" className=" p-5  border-none outline-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
                     </div>
                     <input className="outline-none p-5 mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="People" />
