@@ -21,7 +21,7 @@ const CardDetails = ({ details }) => {
     <section className="max-width">
       <div className="md:flex">
         <div className="md:mr-5 mb-20 md:mb-0 md:w-[75%]">
-          <p className="text-[#2095ae] text-[13px] uppercase mb-1 tracking-[5px]">
+          <p className="text-[#2095ae] text-[13px] uppercase mb-1 tracking-[2px] sm:tracking-[5px]">
             Travel With Patagonia Explore
           </p>
           <h1 className="text-[45px] leading-[1.2em] font-bold text-[#0f2454] mb-2">
