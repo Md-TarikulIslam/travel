@@ -10,7 +10,7 @@ const CardDetailsPage = () => {
   const [toursData, setToursData] = useState(toursCardData);
   const { id } = useParams();
 
-  const details = toursData.find((p) => p.country === id);
+  const details = toursData.find((p) => p.title === id);
   return (
     <>
       <DetailsBanner details={details}/>

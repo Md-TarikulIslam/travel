@@ -37,6 +37,30 @@ p,h5,h6 {
   color: #1e88e5;
 }
 
+/*-------------------- custom font --------------------*/
+
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: local("Quicksand-Regular"),
+    url("./assets/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Kaushan-Regular";
+  src: local("Kaushan-Regular"),
+    url("./assets/fonts/KaushanScript-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.quickSand {
+  font-family: Quicksand-Regular;
+}
+.Kaushan {
+  font-family: Kaushan-Regular;
+}
+
+/*-------------------- discover the world - Banner --------------------  */
+
 .img {
   position: relative;
   z-index: 2;
@@ -70,33 +94,13 @@ p,h5,h6 {
   z-index: -1;
 }
 
-@font-face {
-  font-family: "Quicksand-Regular";
-  src: local("Quicksand-Regular"),
-    url("./assets/fonts/Quicksand-Regular.ttf") format("truetype");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Kaushan-Regular";
-  src: local("Kaushan-Regular"),
-    url("./assets/fonts/KaushanScript-Regular.ttf") format("truetype");
-  font-weight: normal;
-}
-
-.quickSand {
-  font-family: Quicksand-Regular;
-}
-.Kaushan {
-  font-family: Kaushan-Regular;
-}
-
 .custom-next-arrow {
-  background-color: #007bff; /* Change background color */
-  color: white; /* Change icon color */
-  width: 40px; /* Adjust width */
-  height: 40px; /* Adjust height */
-  border-radius: 50%; /* Add border radius */
-  cursor: pointer; /* Maintain clickable behavior */
+  background-color: #007bff; 
+  color: white; 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .bg_overlay2::before {
@@ -128,7 +132,7 @@ p,h5,h6 {
   background-repeat: no-repeat;
 }
 
-/* login page css */
+/*-------------------- login page css --------------------*/
 
 .container.active .sign-in {
   transform: translateX(100%);
@@ -207,7 +211,7 @@ p,h5,h6 {
   transform: translateX(200%);
 }
 
-/* card hover css  */
+/*-------------------- card hover css  --------------------*/
 
 .wrapper {
   perspective: 1000px;
