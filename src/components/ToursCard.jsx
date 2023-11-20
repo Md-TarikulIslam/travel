@@ -26,7 +26,7 @@ const ToursCard = ({data}) => {
                     <h2 className="text-[27px] text-[#0f2454] font-semibold">{data?.title}</h2>
                     <h5 className="text-[16px] text-black mb-1.5">{data?.place}</h5>
                     <h6 className="text-[#2095AE] text-[16px] mb-5">${data?.expense} / per persons</h6>
-                        <p className="text-[#676977 text-[16px] mb-5 text-[#676977]">{data?.desq}</p>
+                        <p className="text-[#676977 text-[16px] mb-5 text-[#676977]">{data?.shortDesq}</p>
                     <div className="grid grid-cols-2 gap-x-6 gap-y-2 mb-8">
                         <p className="flex items-center text-[#676977]"><BsClock className="mr-1 text-lg text-[#2095AE]"/>{data?.day} Days</p>
                         <p className="flex items-center text-[#676977]"><VscLocation className="mr-1 text-2xl text-[#2095AE]"/>{data?.country}</p>
