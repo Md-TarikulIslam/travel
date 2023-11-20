@@ -50,12 +50,12 @@ const CardDetails = ({ details }) => {
           <h3 className="font-semibold mb-5 text-[#0f2454] text-[28px]">
             Information
           </h3>
-          <p className="text-[#676977] w-[90%] leading-[1.75em]">{details?.details?.desq1}</p>
+          <p className="text-[#676977] md:w-[90%] leading-[1.75em] text-justify">{details?.details?.desq1}</p>
           <p className="mt-7 text-[#676977] leading-[1.75em]">
             {details.day} Days {details?.night}Nights, Group: {details?.person}
             +, {details?.country}
           </p>
-          <p className="text-[#676977] w-[90%] mt-7 leading-[1.75em]">{details?.details?.desq2}</p>
+          <p className="text-[#676977] md:w-[90%] mt-7 leading-[1.75em] text-justify">{details?.details?.desq2}</p>
           <div className="mt-10 text-[#676977]">
             <p className="grid grid-cols-2 py-4">
               <span>Departure</span> <span>{details?.details?.departure}</span>
@@ -85,11 +85,8 @@ const CardDetails = ({ details }) => {
                     <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="Full Name" />
                     <input className="outline-none p-5 mb-6 border-none text-[16px] w-full text-black placeholder:text-[#455a64]" type="email" name="" id="" placeholder="Email Address"/>
                     <div className="relative">
-                     {/* <div className="sm:hidden absolute top-[25%] w-full px-5 flex justify-between"> */}
-                      {/* <span className="text-[#455a64]">Pick Your Day</span> */}
                      <FaRegCalendarAlt size={20} color="#2095ae" className="sm:hidden
                      absolute top-[25%] right-5"/>
-                     {/* </div> */}
                     <input type="date" className=" p-5 border-none outline-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
                     </div>
                     <input className="outline-none p-5 mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="People" />
