@@ -6,6 +6,16 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdDone, MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+import {
+  Timeline,
+  TimelineItem,
+  TimelineConnector,
+  TimelineHeader,
+  TimelineIcon,
+  TimelineBody,
+  Typography,
+} from "@material-tailwind/react";
+
 const CardDetails = ({ details }) => {
   return (
     <section className="max-width">
@@ -91,6 +101,34 @@ const CardDetails = ({ details }) => {
 
             </div>
       </div>
+
+      {/* itenary  */}
+      <div className="mt-20">
+      <h3 className="font-semibold mb-12 text-[#0f2454] text-[28px]">
+            Full Itinerary :
+          </h3>
+      <Timeline className="sm:ml-20 grid md:grid-cols-2">
+       {details.itenary.map(data => (
+         <TimelineItem key={data.id}>
+         <TimelineConnector />
+         <TimelineHeader className="h-3">
+           <TimelineIcon />
+           <Typography variant="h6" color="blue-gray" className="leading-none text-3xl text-[#2095ae]">
+             {data.title}
+           </Typography>
+         </TimelineHeader>
+         <TimelineBody className="pt-6 pb-2">
+           <Typography variant="medium" color="gary" className="font-normal text-gray-600">
+             {data?.desq.map((item) => <li className=" list-none mb-7" key={item}>- {item}</li>)}
+           </Typography>
+         </TimelineBody>
+       </TimelineItem>
+       ))}
+          {/* <TimelineConnector /> */}
+      </Timeline>
+    </div>
+
+
       {details?.details?.imgGallery ? (
         <div className="mt-10">
           <h3 className="font-semibold mb-7 text-[#0f2454] text-[28px]">
