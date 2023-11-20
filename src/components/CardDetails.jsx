@@ -107,13 +107,13 @@ const CardDetails = ({ details }) => {
       <h3 className="font-semibold mb-12 text-[#0f2454] text-[28px]">
             Full Itinerary :
           </h3>
-      <Timeline className="sm:ml-20 grid md:grid-cols-2">
+      <Timeline className="sm:ml-10 grid md:grid-cols-2">
        {details.itenary.map(data => (
          <TimelineItem key={data.id}>
          <TimelineConnector />
          <TimelineHeader className="h-3">
            <TimelineIcon />
-           <Typography variant="h6" color="blue-gray" className="leading-none text-3xl text-[#2095ae]">
+           <Typography variant="h6" color="blue-gray" className="leading-none text-2xl text-[#2095ae]">
              {data.title}
            </Typography>
          </TimelineHeader>
