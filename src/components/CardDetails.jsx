@@ -93,7 +93,7 @@ const CardDetails = ({ details }) => {
               >
                 <img
                   src={data?.img}
-                  className="rounded-xl hover:scale-110 hover:opacity-90 duration-300"
+                  className="rounded-xl md:h-[200px] md:w-[220px] object-cover object-center hover:scale-110 hover:opacity-90 duration-300"
                   alt=""
                 />
               </div>
