@@ -1,9 +1,8 @@
-import { Input } from "@material-tailwind/react";
 import { BsClock } from "react-icons/bs";
 import { LuSmile } from "react-icons/lu";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { VscLocation } from "react-icons/vsc";
-import { IoCalendarNumberSharp } from "react-icons/io5";
+import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const CardDetails = ({ details }) => {
@@ -65,11 +64,12 @@ const CardDetails = ({ details }) => {
                     <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="Full Name" />
                     <input className="outline-none p-5 mb-6 border-none text-[16px] w-full text-black placeholder:text-[#455a64]" type="email" name="" id="" placeholder="Email Address"/>
                     <div className="relative">
-                     <div className="sm:hidden absolute top-[25%] w-full px-5 flex justify-between">
-                      <span className="text-[#455a64]">Pick Your Day</span>
-                     <IoCalendarNumberSharp size={20} color="#2095ae"/>
-                     </div>
-                    <input type="date" placeholder="Choose Your Date" className=" p-5  border-none outline-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
+                     {/* <div className="sm:hidden absolute top-[25%] w-full px-5 flex justify-between"> */}
+                      {/* <span className="text-[#455a64]">Pick Your Day</span> */}
+                     <FaRegCalendarAlt size={20} color="#2095ae" className="sm:hidden
+                     absolute top-[25%] right-5"/>
+                     {/* </div> */}
+                    <input type="date" className=" p-5 border-none outline-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
                     </div>
                     <input className="outline-none p-5 mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="People" />
                     <textarea className="outline-none block w-full resize-non overflow-hidden p-5  border-none text-[16px] text-black mb-6 placeholder:text-[#455a64]" placeholder="Your Enquiry" cols={20} rows={4} ></textarea>
