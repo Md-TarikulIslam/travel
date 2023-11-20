@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const CardDetails = ({ details }) => {
   return (
-    <section className="max-width">
+    <div className="max-width">
       <div className="md:flex">
         <div className="md:mr-5 mb-20 md:mb-0">
           <p className="text-[#2095ae] text-[13px] uppercase mb-1 tracking-[5px]">
@@ -96,7 +96,7 @@ const CardDetails = ({ details }) => {
       ) : (
         ""
       )}
-    </section>
+    </div>
   );
 };
 
