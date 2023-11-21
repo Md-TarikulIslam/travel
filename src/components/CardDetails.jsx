@@ -32,7 +32,7 @@ const CardDetails = ({ details }) => {
           <div className="grid grid-cols-2 gap-x-6 gap-y-6 mb-8 py-5">
             <p className="flex items-center text-[#676977]">
               <BsClock className="mr-1 text-lg text-[#2095AE]" />
-              {details?.day} Days {details?.night} Nights
+              {details?.details.duration}
             </p>
             <p className="flex items-center text-[#676977]">
               <MdOutlinePersonOutline className="mr-1 text-2xl text-[#2095AE]" />
@@ -121,7 +121,6 @@ const CardDetails = ({ details }) => {
          </TimelineBody>
        </TimelineItem>
        ))}
-          {/* <TimelineConnector /> */}
       </Timeline>
     </div>
 
