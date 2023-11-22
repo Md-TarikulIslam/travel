@@ -6,7 +6,7 @@ const Dashboard = () => {
     return (
         <div>
            
-            <div className='max-w-screen-xl mx-auto py-20'>
+            <div className='max-w-screen-2xl mx-auto py-20'>
                 <Card>
                     <CardBody>
                         lorem50

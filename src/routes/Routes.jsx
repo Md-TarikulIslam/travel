@@ -11,59 +11,70 @@ import SubMain from "./SubMain";
 import DashProfile from "../components/DashProfile";
 import DashTransaction from "../components/DashTransaction";
 import CardDetailsPage from "../pages/CardDetailsPage";
+import DashUsers from "../components/DashUsers";
+import PaymentSuccesspage from "../pages/PaymentSuccessPage";
+import PaymentCancelPage from "../pages/PaymentCancelPage";
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: "/",
         element: <Main />,
         children: [
             {
-                path: '/',
-                element: <Homepage />
+                path: "/",
+                element: <Homepage />,
             },
             {
-                path: '/login',
-                element: <LoginPage />
+                path: "/login",
+                element: <LoginPage />,
             },
             {
-                path: '/about',
-                element: <AboutPage />
+                path: "/about",
+                element: <AboutPage />,
             },
             {
-                path: '/destination',
-                element: <DestinationPage />
+                path: "/destination",
+                element: <DestinationPage />,
             },
             {
-                path: '/destination/:id',
-                element: <CardDetailsPage />
+                path: "/destination/:id",
+                element: <CardDetailsPage />,
             },
             {
-                path: '/gallery',
-                element: <GalleryPage />
+                path: "/gallery",
+                element: <GalleryPage />,
             },
             {
-                path: '/contact',
-                element: <ContactPage />
+                path: "/contact",
+                element: <ContactPage />,
             },
             {
-                path: '/dashboard',
+                path: "/success",
+                element: <PaymentSuccesspage />,
+            },
+            {
+                path: "/cancel",
+                element: <PaymentCancelPage />,
+            },
+            {
+                path: "/dashboard",
                 element: <SubMain />,
                 children: [
                     {
-                        path: '/dashboard/profile',
-                        element: <DashProfile />
+                        path: "/dashboard/profile",
+                        element: <DashProfile />,
                     },
                     {
-                        path: '/dashboard/transaction',
-                        element: <DashTransaction />
+                        path: "/dashboard/transaction",
+                        element: <DashTransaction />,
                     },
                     {
-                        path: '/dashboard/users',
-                        element: <DashTransaction />
+                        path: "/dashboard/users",
+                        element: <DashUsers />,
                     },
-                ]
-            }
-        ]
-    }
-])
-export default router
+                ],
+            },
+        ],
+    },
+]);
+export default router;

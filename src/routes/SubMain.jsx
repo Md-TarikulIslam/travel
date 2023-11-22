@@ -5,7 +5,7 @@ const SubMain = () => {
     return (
         <div>
             <DashboardNav />
-           <div className='max-w-screen-md mx-auto pb-10'>
+           <div className='max-w-screen-lg mx-auto pb-10'>
            <Outlet />
            </div>
         </div>
