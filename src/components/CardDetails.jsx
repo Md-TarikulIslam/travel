@@ -173,7 +173,7 @@ const CardDetails = ({ details }) => {
                 </div>
                 <div>
                     <h1 className="text-center bg-[#2095ae] text-white h-20 text-[27px] font-semibold leading-[80px]">
-                        Form <span className="ml-10">${details?.expense}</span>
+                        Book by - ${details?.expense}
                     </h1>
                     <form className="bg-[#f4f5f8] px-6 py-11">
                         <input
