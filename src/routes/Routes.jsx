@@ -48,14 +48,8 @@ const router = createBrowserRouter([
                 path: "/contact",
                 element: <ContactPage />,
             },
-            {
-                path: "/success",
-                element: <PaymentSuccesspage />,
-            },
-            {
-                path: "/cancel",
-                element: <PaymentCancelPage />,
-            },
+           
+           
             {
                 path: "/dashboard",
                 element: <SubMain />,
@@ -75,6 +69,14 @@ const router = createBrowserRouter([
                 ],
             },
         ],
+    },
+    {
+        path: "/success",
+        element: <PaymentSuccesspage />,
+    },
+    {
+        path: "/cancel",
+        element: <PaymentCancelPage />,
     },
 ]);
 export default router;

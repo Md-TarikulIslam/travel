@@ -59,7 +59,7 @@ export default function DashTransaction() {
             <table className="w-full min-w-max table-auto text-left">
                 <thead>
                     <tr>
-                        {TABLE_HEAD.map((head) => (
+                        {TABLE_HEAD?.map((head) => (
                             <th
                                 key={head}
                                 className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
@@ -84,7 +84,7 @@ export default function DashTransaction() {
                                     color="blue-gray"
                                     className="font-normal"
                                 >
-                                    {order.userInfo.name}
+                                    {order?.userInfo.name}
                                 </Typography>
                             </td>
                             <td className="p-4">
@@ -93,7 +93,7 @@ export default function DashTransaction() {
                                     color="blue-gray"
                                     className="font-normal"
                                 >
-                                    {order.userInfo.email}
+                                    {order?.userInfo.email}
                                 </Typography>
                             </td>
                             <td className="p-4">
@@ -102,7 +102,7 @@ export default function DashTransaction() {
                                     color="blue-gray"
                                     className="font-normal"
                                 >
-                                    {order.serviceInfo.title}
+                                    {order?.serviceInfo.title}
                                 </Typography>
                             </td>
                             <td className="p-4">
