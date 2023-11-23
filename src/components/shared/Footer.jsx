@@ -67,19 +67,19 @@ const Footer = () => {
               commodo erat acar accumsa lobortis, enim diam the nesuen.
             </p>
             <div className="flex gap-2 mt-6">
-              <a href="#">
+              <a href="https://www.facebook.com/patagoniaexplore/" target="blank"> 
                 <FaFacebookF
                   size={40}
                   className="bg-[#2095ae] hover:bg-[#1c7e93] transition-all px-3 py-3 rounded-full text-white"
                 />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/patagoniaexplore/" target="blank">
                 <FaInstagram
                   size={40}
                   className="bg-[#2095ae] hover:bg-[#1c7e93] transition-all px-3 py-3 rounded-full text-white"
                 />
               </a>
-              <a href="#">
+              <a href="https://twitter.com/patagoniaxplore" target="blank">
                 <FaXTwitter
                   size={40}
                   className="bg-[#2095ae] hover:bg-[#1c7e93] transition-all px-3 py-3 rounded-full text-white"

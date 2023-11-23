@@ -8,7 +8,7 @@ const DiscoverWorld = () => {
         <div className="flex-col md:flex-row flex items-center max-width">
             <div className='md:w-[60%]  md:mr-28 md:mb-0 mb-12'>
                 <p className='text-[#2095AE] text-[13px] mb-1 tracking-widest'>THE BEST TRAVEL AGENCY</p>
-                <h1 className=' text-[45px] font-bold text-[#0f2454] uppercase mb-5  leading-tight w-[90%]'>DISCOVER THE <span className='text-[#2095AE]'>WORLD</span> WITH OUR GUIDE</h1>
+                <h1 className=' text-[45px] font-bold text-[#0f2454] uppercase mb-5  leading-tight'>DISCOVER <span className='text-[#2095AE]'>Patagonia</span> WITH OUR GUIDE</h1>
                 <p className='text-[16px] leading-7 mb-5 text-[#676977]'>You can choose any country with good tourism. Agency elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the pellentesque velit. Donec id velit ac arcu posuere blane.</p>
                 <p className=' text-[16px] leading-7 mb-5 text-[#676977]'>Hotel ut nisl quam nestibulum ac quam nec odio elementum ceisue the miss varius natoque penatibus et magnis dis parturient monte</p>
                 <p className='flex items-center text-[#676977] mb-2'><MdDone className='text-white mr-4 h-8 w-8 bg-[#2095ae] rounded-full px-2 py-2'/>2 Years of Experience</p>

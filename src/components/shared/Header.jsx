@@ -132,7 +132,7 @@ export default function Header() {
                                 alt="avatar"
                                 variant="rounded"
                                 size="sm"
-                                className="ml-3"
+                                className="ml-8"
                             />
                         </Link>
                     )}
