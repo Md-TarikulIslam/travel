@@ -5,6 +5,7 @@ import { VscLocation } from "react-icons/vsc";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdDone, MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { Input } from "@material-tailwind/react";
 
 const CardDetails = ({ details }) => {
   return (
@@ -60,36 +61,31 @@ const CardDetails = ({ details }) => {
             </p>
             <p className="grid grid-cols-2 py-4">
               <span>Price Includes</span>{" "}
-              <span>{details?.details?.priceIncludes.map((data) => <li className="flex items-center list-none mb-7" key={data}><MdDone size={20} className="mr-3 text-[#2095ae]"/>{data}</li>)}</span>
+              <span>{details?.details?.priceIncludes.map((data) => <li className="flex items-center list-none mb-7" key={data}><MdDone size={20} className="mr-3 text-[#2095ae]" />{data}</li>)}</span>
             </p>
             <p className="grid grid-cols-2 py-4">
               <span>Price Excludes</span>{" "}
-              <span>{details?.details?.priceExcludes.map((data) => <li className="flex items-center list-none mb-7" key={data}><MdClose  size={20} className="mr-3 text-[#f00]"/>{data}</li>)}</span>
+              <span>{details?.details?.priceExcludes.map((data) => <li className="flex items-center list-none mb-7" key={data}><MdClose size={20} className="mr-3 text-[#f00]" />{data}</li>)}</span>
             </p>
-            
+
           </div>
         </div>
         <div>
-                <h1 className="text-center bg-[#2095ae] text-white h-20 text-[27px] font-semibold leading-[80px]">Form <span className="ml-10">${details?.expense}</span></h1>
-                <form className="bg-[#f4f5f8] px-6 py-11">
-                    <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="Full Name" />
-                    <input className="outline-none p-5 mb-6 border-none text-[16px] w-full text-black placeholder:text-[#455a64]" type="email" name="" id="" placeholder="Email Address"/>
-                    <div className="relative">
-                     {/* <div className="sm:hidden absolute top-[25%] w-full px-5 flex justify-between"> */}
-                      {/* <span className="text-[#455a64]">Pick Your Day</span> */}
-                     <FaRegCalendarAlt size={20} color="#2095ae" className="sm:hidden
-                     absolute top-[25%] right-5"/>
-                     {/* </div> */}
-                    <input type="date" className=" p-5 border-none outline-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
-                    </div>
-                    <input className="outline-none p-5 mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="People" />
-                    <textarea className="outline-none block w-full resize-non overflow-hidden p-5  border-none text-[16px] text-black mb-6 placeholder:text-[#455a64]" placeholder="Your Enquiry" cols={20} rows={4} ></textarea>
-                    <button className="px-5 py-3 bg-[#2095ae] hover:bg-white hover:text-[#2095ae] text-white duration-300 border border-transparent hover:border-[#2095ae]">
-                        <Link href="#">Book Now</Link>
-                    </button>
-                </form>
+          <h1 className="text-center bg-[#2095ae] text-white h-20 text-[27px] font-semibold leading-[80px]">Form <span className="ml-10">${details?.expense}</span></h1>
+          <form className="bg-[#f4f5f8] px-6 py-11">
+            <input className="outline-none p-5  mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="Full Name" />
+            <input className="outline-none p-5 mb-6 border-none text-[16px] w-full text-black placeholder:text-[#455a64]" type="email" name="" id="" placeholder="Email Address" />
+        
+              <input type="date" className="p-5 border-none outline-none text-[16px] w-full mb-6 text-black placeholder:text-[#455a64] bg-white" />
+          
+            <input className="outline-none p-5 mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]" type="text" placeholder="People" />
+            <textarea className="outline-none block w-full resize-non overflow-hidden p-5  border-none text-[16px] text-black mb-6 placeholder:text-[#455a64]" placeholder="Your Enquiry" cols={20} rows={4} ></textarea>
+            <button className="px-5 py-3 bg-[#2095ae] hover:bg-white hover:text-[#2095ae] text-white duration-300 border border-transparent hover:border-[#2095ae]">
+              <Link href="#">Book Now</Link>
+            </button>
+          </form>
 
-            </div>
+        </div>
       </div>
       {details?.details?.imgGallery ? (
         <div className="mt-10">
@@ -110,6 +106,7 @@ const CardDetails = ({ details }) => {
               </div>
             ))}
           </div>
+         
         </div>
       ) : (
         ""
