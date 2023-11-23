@@ -29,7 +29,7 @@ const LoginPage = () => {
 
         const userInfo = {
             name: response?.user?.displayName,
-            email: response?.user?.email,
+            email: response?.user?.email || `${response?.user?.displayName}@example.com`,
             avatar: response?.user?.photoURL,
         };
 
