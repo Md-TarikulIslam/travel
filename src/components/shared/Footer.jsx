@@ -37,7 +37,7 @@ const Footer = () => {
             <div>
               <h6 className="text-[16px] font-semibold">Write to us</h6>
               <p className="text-[#ffffffcc] mt-1">
-                <a href="mailto:email@example.com">info@travelagency.com</a>
+                <a href="mailto:patagoniaexpeditionss@gmail.com">patagoniaexpeditionss@gmail.com</a>
               </p>
             </div>
           </div>
