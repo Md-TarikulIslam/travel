@@ -16,7 +16,7 @@ import logo from "../../assets/images/logo/logo3.png";
 const Footer = () => {
   return (
     <footer className="bg-[#0f2454]">
-      <div className="text-white max-width px-4 md:h-[90vh] flex flex-col justify-center">
+      <div className="text-white max-width px-4 md:h-[85vh] flex flex-col justify-center">
         <div className="flex flex-col md:flex-row gap-5 justify-between sm:w-[80%] mx-auto  border border-[#ffffff1a] py-5 md:px-10 px-5 rounded-md md:w-full w-full mt-10">
           <div className="flex items-center">
             <div className="bg-[#2095ae] min-w-[65px] rounded-md min-h-[65px] mr-4 flex items-center justify-center">

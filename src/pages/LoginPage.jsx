@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
-import { auth, googleProvider } from "../firebase.init";
+import { auth, googleProvider, facebookProvider } from "../firebase.init";
 import {
     createUserWithEmailAndPassword,
     signInWithPopup,
@@ -28,9 +28,9 @@ const LoginPage = () => {
         const response = await signInWithPopup(auth, provider);
 
         const userInfo = {
-            name: response.user.displayName,
-            email: response.user.email,
-            avatar: response.user?.photoURL,
+            name: response?.user?.displayName,
+            email: response?.user?.email,
+            avatar: response?.user?.photoURL,
         };
 
         fetch("https://patagonia-explore-server.vercel.app/api/signup", {
@@ -53,17 +53,20 @@ const LoginPage = () => {
             if (isContainerActive) {
                 await createUserWithEmailAndPassword(auth, email, password)
                     .then(() => {
-                        fetch("https://patagonia-explore-server.vercel.app/api/signup", {
-                            method: "POST",
-                            headers: {
-                                "content-type": "application/json",
+                        fetch(
+                            "https://patagonia-explore-server.vercel.app/api/signup",
+                            {
+                                method: "POST",
+                                headers: {
+                                    "content-type": "application/json",
+                                },
+                                body: JSON.stringify({
+                                    name,
+                                    email,
+                                    avatar: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+                                }),
                             },
-                            body: JSON.stringify({
-                                name,
-                                email,
-                                avatar: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
-                            }),
-                        })
+                        )
                             .then((res) => res.json())
                             .then((data) => {
                                 localStorage.setItem(
@@ -79,15 +82,18 @@ const LoginPage = () => {
             } else {
                 await signInWithEmailAndPassword(auth, email, password)
                     .then(() => {
-                        fetch("https://patagonia-explore-server.vercel.app/api/signin", {
-                            method: "POST",
-                            headers: {
-                                "content-type": "application/json",
+                        fetch(
+                            "https://patagonia-explore-server.vercel.app/api/signin",
+                            {
+                                method: "POST",
+                                headers: {
+                                    "content-type": "application/json",
+                                },
+                                body: JSON.stringify({
+                                    email,
+                                }),
                             },
-                            body: JSON.stringify({
-                                email,
-                            }),
-                        })
+                        )
                             .then((res) => res.json())
                             .then((data) => {
                                 localStorage.setItem(
@@ -160,7 +166,12 @@ const LoginPage = () => {
                             >
                                 <FaGoogle />
                             </div>
-                            <div className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10 cursor-pointer">
+                            <div
+                                onClick={() =>
+                                    handleSocialLogin(facebookProvider)
+                                }
+                                className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-1 w-10 h-10 cursor-pointer"
+                            >
                                 <FaFacebookF />
                             </div>
                         </div>
@@ -215,7 +226,12 @@ const LoginPage = () => {
                             >
                                 <FaGoogle />
                             </div>
-                            <div className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-2 w-10 h-10 cursor-pointer">
+                            <div
+                                onClick={() =>
+                                    handleSocialLogin(facebookProvider)
+                                }
+                                className="text-[#333] text-[13px] mt-3.5 mb-2.5 border border-[#ccc] rounded-[20%] inline-flex justify-center items-center mx-2 w-10 h-10 cursor-pointer"
+                            >
                                 <FaFacebookF />
                             </div>
                         </div>

@@ -25,7 +25,7 @@ const PaymentCancelPage = () => {
                     Payment Unsuccessful
                 </p>
 
-                <Link to="/login">
+                <Link to="/destination">
                     {" "}
                     <Button
                         color="blue"

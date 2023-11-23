@@ -15,6 +15,7 @@ import {
     Typography,
 } from "@material-tailwind/react";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const CardDetails = ({ details }) => {
     const [formData, setFormData] = useState({
@@ -27,6 +28,17 @@ const CardDetails = ({ details }) => {
 
     const makePayment = async (e) => {
         e.preventDefault();
+
+        if (
+            !formData.fullName ||
+            !formData.email ||
+            !formData.date ||
+            !formData.people ||
+            !formData.enquire
+        ) {
+            toast("Please enter your information.");
+            return;
+        }
 
         const stripe = await loadStripe(`${import.meta.env.VITE_STRIPE_KEY}`);
 
@@ -211,7 +223,7 @@ const CardDetails = ({ details }) => {
                         </div>
                         <input
                             className="outline-none p-5 mb-6 mr-5 w-full border-none text-[16px] text-black placeholder:text-[#455a64]"
-                            type="text"
+                            type="number"
                             placeholder="People"
                             name="people"
                             value={formData?.people}
