@@ -12,7 +12,7 @@ const DiscoverWorld = () => {
                 <p className='text-[16px] leading-7 mb-5 text-[#676977]'>Welcome to Patagonia Explore, where your dream adventure begins! We specialize in crafting personalized journeys through the stunning landscapes of Patagonia. Whether you crave thrilling hikes or serene cruises or want to soak in the breathtaking scenery, we've got you covered. Our team of experts is dedicated to creating seamless, unforgettable experiences. From cozy lodges to exciting excursions, we handle the details so you can focus on making memories.</p>
                 <p className=' text-[16px] leading-7 mb-5 text-[#676977]'>
 Discover the wonders of Patagonia with us — your gateway to nature's grandeur and unparalleled adventures. Let's turn your travel dreams into reality!</p>
-                <p className='flex items-center text-[#676977] mb-2'><MdDone className='text-white mr-4 h-8 w-8 bg-[#2095ae] rounded-full px-2 py-2'/>2 Years of Experience</p>
+                <p className='flex items-center text-[#676977] mb-2'><MdDone className='text-white mr-4 h-8 w-8 bg-[#2095ae] rounded-full px-2 py-2'/>10 Years of Experience</p>
                 <p className='flex items-center text-[#676977] mb-7'><MdDone className='text-white mr-4 h-8 w-8 bg-[#2095ae] rounded-full px-2 py-2'/>30+ Tour Destinations</p>
                 <div className='flex items-center'>
                     <FiPhoneCall className='text-[#2095ae] text-4xl mr-4'/>
