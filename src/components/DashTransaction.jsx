@@ -76,7 +76,7 @@ export default function DashTransaction() {
                     </tr>
                 </thead>
                 <tbody>
-                    {orders && orders?.map((order, index) => (
+                    {orders.length > 0 && orders?.map((order, index) => (
                         <tr key={index} className="even:bg-blue-gray-50/50">
                             <td className="p-4">
                                 <Typography
