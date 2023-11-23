@@ -33,7 +33,7 @@ const ToursCard = ({data}) => {
                         <p className="flex items-center text-[#676977]"><MdOutlinePersonOutline className="mr-1 text-2xl text-[#2095AE]"/>{data?.person}+</p>
                         <p className="flex items-center text-[#676977]"><LuSmile className="mr-1 text-xl text-[#2095AE]"/>{data?.ratings}</p>
                     </div>
-                    <Link onClick={() => navigate(`/destination/${data?.title}`)} className="border-b border-b-blue-500 py-1 hover:text-blue-500 duration-300" to="#">Tour Details</Link>
+                    <Link onClick={() => navigate(`/destination/${data?.id}`)} className="border-b border-b-blue-500 py-1 hover:text-blue-500 duration-300" to="#">Tour Details</Link>
                 </div>
           </div>
     );
