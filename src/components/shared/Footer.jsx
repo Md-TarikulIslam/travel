@@ -63,8 +63,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="logo" width={250} />
             <p className="mt-6 text-[#ffffffcc] ">
-              Quisque imperdiet sapien porttito the bibendum sellentesque the
-              commodo erat acar accumsa lobortis, enim diam the nesuen.
+            Discover the wonders of Patagonia with us — your gateway to nature's grandeur and unparalleled adventures. Let's turn your travel dreams into reality!
             </p>
             <div className="flex gap-2 mt-6">
               <a href="https://www.facebook.com/patagoniaexplore/" target="blank"> 
