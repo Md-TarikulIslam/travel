@@ -167,7 +167,7 @@ const Footer = () => {
           </div>
         </div>
       <div className="mt-6 md:mb-0 mb-6">
-        <p className="text-[#ffffffcc] text-sm text-center">©2023 <a target="blank" href="https://shakiqur-rahman-v2.netlify.app/#" className="text-blue-500">Shake's Team</a> All rights reserved.</p>
+        <p className="text-[#ffffffcc] text-sm text-center">©2023 <a target="blank" href="https://shakiqur-rahman.netlify.app/#" className="text-blue-500">Shake's Team</a> All rights reserved.</p>
       </div>
       </div>
     </footer>
