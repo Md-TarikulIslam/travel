@@ -74,7 +74,7 @@ const CardDetails = ({ details }) => {
     return (
         <section className="max-width">
             <div className="md:flex">
-                <div className="md:mr-5 mb-20 md:mb-0 md:w-[75%]">
+                <div className="md:mr-5 mb-20 md:mb-0 w-full">
                     <p className="text-[#2095ae] text-[13px] uppercase mb-1 tracking-[2px] sm:tracking-[5px]">
                         Travel With Patagonia Explore
                     </p>
@@ -171,7 +171,7 @@ const CardDetails = ({ details }) => {
                         </p>
                     </div>
                 </div>
-                <div>
+                <div className="md:w-[65%]">
                     <h1 className="text-center bg-[#2095ae] text-white h-20 text-[27px] font-semibold leading-[80px]">
                         Book by - ${details?.expense}
                     </h1>
@@ -255,6 +255,9 @@ const CardDetails = ({ details }) => {
                             Book Now
                         </button>
                     </form>
+                    <div className="md:mt-48 mt-20">
+                        <img src={details?.details?.mapImg} className="border border-blue-600" alt="Map"/>
+                    </div>
                 </div>
             </div>
 

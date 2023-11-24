@@ -16,6 +16,13 @@ import iguazuFalls2 from '../assets/images/tours/iguazu-falls2.jpg'
 import iguazuFalls3 from '../assets/images/tours/iguazu-falls3.webp'
 import easterIsland2 from "../assets/images/tours/easterIsland2.jpg";
 import easterIsland3 from "../assets/images/tours/easterIsland3.webp";
+import map1 from '../assets/images/map/1.jpg'
+import map2 from '../assets/images/map/2 & 3.jpg'
+import map3 from '../assets/images/map/2 & 3.jpg'
+import map4 from '../assets/images/map/4.jpg'
+import map5 from '../assets/images/map/5.jpg'
+import map6 from '../assets/images/map/6.jpg'
+
 
 export const toursCardData = [
   {
@@ -53,6 +60,7 @@ export const toursCardData = [
         "Sunscreen",
         "Toiletries and personal items",
       ],
+      mapImg : map1,
       imgGallery: [
         {
           id: 1,
@@ -188,6 +196,7 @@ export const toursCardData = [
         "Sunscreen",
         "Toiletries and personal items",
       ],
+      mapImg : map2,
       imgGallery: [
         {
           id: 1,
@@ -319,6 +328,7 @@ export const toursCardData = [
         "Sunscreen",
         "Toiletries and personal items",
       ],
+      mapImg : map3,
       imgGallery: [
         {
           id: 1,
@@ -450,6 +460,7 @@ export const toursCardData = [
         "Sunscreen",
         "Toiletries and personal items",
       ],
+      mapImg : map4,
       imgGallery: [
         {
           id: 1,
@@ -581,6 +592,7 @@ export const toursCardData = [
         "Sunscreen",
         "Toiletries and personal items",
       ],
+      mapImg : map5,
       imgGallery: [
         {
           id: 1,
@@ -712,6 +724,7 @@ export const toursCardData = [
         "Sunscreen",
         "Toiletries and personal items",
       ],
+      mapImg : map6,
       imgGallery: [
         {
           id: 1,
