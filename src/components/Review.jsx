@@ -218,7 +218,7 @@ const  Review = () => {
                                             })
                                         }
                                     </div>
-                                    <p className='text-sm my-4'>{data.details} </p>
+                                    <p className='text-sm my-4'>{data.details.slice(0,180)}... </p>
                                     <div className='flex items-center justify-between'>
                                         <div className='flex items-center gap-4'>
                                             <img className='w-12 h-12 rounded-full ' src={data.img} alt="" />
