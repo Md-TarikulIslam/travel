@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import img from "../assets/images/dash-profile/1.jpeg";
 import { Card, CardBody } from "@material-tailwind/react";
 import { auth } from "../firebase.init";
 
@@ -21,7 +20,9 @@ const DashProfile = () => {
 
     return (
         <div>
-            <div className="text-center my-10">{!user && <h1>You are signed in with Facebook.</h1>}</div>
+            <div className="text-center my-10">
+                {!user && <h1>You are signed in with Facebook.</h1>}
+            </div>
             {user && (
                 <div className="flex flex-col lg:flex-row px-2 lg:px-0 items-center gap-4">
                     <div className="basis-5/12 w-full">
