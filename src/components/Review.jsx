@@ -1,4 +1,4 @@
-import { Card, CardBody, Carousel } from "@material-tailwind/react";
+import { Card, CardBody, Carousel, Rating } from "@material-tailwind/react";
 import { useState } from "react";
 import { MdOutlinePlayCircleFilled, MdStarRate } from "react-icons/md";
 import img3 from "../assets/images/review/1.jpeg";
@@ -6,6 +6,18 @@ import img2 from "../assets/images/review/2.jpg";
 import img1 from "../assets/images/review/3.jpg";
 import img4 from "../assets/images/review/4.jpg";
 import thumbnail from '../assets/images/gallery/2.jpg'
+
+
+import {
+  Button,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  Input,
+  Textarea,
+  Typography
+} from "@material-tailwind/react";
 
 const allData = [
   {
@@ -110,9 +122,13 @@ const  Review = () => {
         const playVideo = () => {
             setVideoPlaying(true);
           };
+
+          const [open, setOpen] = useState(false);
+ 
+          const handleOpen = () => setOpen(!open);
     return (
         <div className='max-w-screen-xl mx-auto bg-[#19c3c2] h-[600px] lg:h-96 relative'>
-            <div className='flex lg:flex-row flex-col'>
+            <div className='flex lg:flex-row flex-col '>
                 <div className='flex-1 absolute -top-20 md:right-40 lg:left-16 lg:mx-0 mx-auto w-full'>
                     <Card className=' rounded-none h-80 lg:w-[28rem] w-[20rem] mx-auto lg:mx-0'>
                     <CardBody className="p-0">
@@ -140,6 +156,47 @@ const  Review = () => {
                     </Card>
                 </div>
                 <div className='flex-1 absolute -bottom-16 z-10 md:right-[24rem] lg:right-[32rem] mx-auto lg:mx-0 w-full md:w-0'>
+                <Button onClick={handleOpen} className=" whitespace-nowrap mb-3 text-white bg-[#1d355e]">Leave a Review</Button>
+    <Dialog open={open} size="xs" handler={handleOpen} className="p-3">
+        <div className="flex items-center justify-between">
+          <DialogHeader className="flex flex-col items-start">
+            {" "}
+            <Typography className="mb-1" variant="h4">
+              Leave Your Review
+            </Typography>
+          </DialogHeader>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="mr-3 h-6 w-6"
+            onClick={handleOpen}
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </div>
+        <DialogBody>
+          <div className="grid gap-8">
+          <div className="flex flex-col items-center">
+            <p className="mb-1 font-normal text-lg text-black">Rate Us</p>
+          <Rating value={4} />
+          </div>
+            <Textarea label="Message"/>
+          </div>
+        </DialogBody>
+        <DialogFooter className="space-x-2">
+          <Button variant="text" color="gray" onClick={handleOpen}>
+            cancel
+          </Button>
+          <Button variant="gradient" color="gray" onClick={handleOpen}>
+            send message
+          </Button>
+        </DialogFooter>
+      </Dialog>
                     <Card className='rounded-none h-[400px] lg:h-80 lg:w-[28rem] w-[20rem] mx-auto lg:mx-0 p-4'>
                         <CardBody>
                               <div>

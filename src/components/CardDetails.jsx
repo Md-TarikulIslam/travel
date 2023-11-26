@@ -17,7 +17,18 @@ import {
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+import {
+    Dialog,
+    DialogBody,
+    Card,
+  } from "@material-tailwind/react";
+   
+
 const CardDetails = ({ details }) => {
+
+    const [open, setOpen] = useState(false);   
+    const handleOpen = () => setOpen((cur) => !cur);   
+
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -255,8 +266,29 @@ const CardDetails = ({ details }) => {
                             Book Now
                         </button>
                     </form>
-                    <div className="md:mt-48 mt-20">
+               {/* <div className="md:mt-48 mt-20">
                         <img src={details?.details?.mapImg} className="border border-blue-600" alt="Map"/>
+                    </div> */}
+<div className="just-try md:mt-44 mt-20">
+      <Card
+        className="cursor-pointer overflow-hidden transition-opacity hover:opacity-90 rounded-none border border-blue-600 "
+        onClick={handleOpen}
+      >
+        <img
+          alt="map"
+          className="h-full w-full object-cover object-center"
+          src={details?.details?.mapImg}
+        />
+      </Card>
+       <Dialog size="lg" open={open} handler={handleOpen}>
+        <DialogBody>
+          <img
+            alt="nature"
+            className="lg:h-[80vh] w-full rounded-lg object-cover object-center"
+            src={details?.details?.mapImg}
+          />
+        </DialogBody>
+      </Dialog>
                     </div>
                 </div>
             </div>
