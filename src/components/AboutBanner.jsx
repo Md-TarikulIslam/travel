@@ -2,8 +2,8 @@ import img from "../assets/images/destination/destination.jpg";
 
 const AboutBanner = () => {
   return (
-    <div className="relative bg-black">
-      <div className=" bg_overlay">
+    <div className="relative bg-black ">
+      <div className=" bg_overlay w-full">
         <img
           className="h-[60vh] w-full object-cover opacity-100"
           src={img}

@@ -9,12 +9,14 @@ const BookNowBanner = () => {
             Plan your trip with us
           </h3>
           <h2 className="md:text-[45px] text-[35px] text-white font-semibold leading-[1.2]">
-            Ready for an unforgetable tour?
+            Ready for an unforgettable tour?
           </h2>
         </div>
-        <button className="uppercase bg-[#313041] text-[12px] font-bold tracking-2 md:px-10 md:py-6 px-6 py-4 rounded-xl text-white">
-          <Link to='/destination'> Book tour now</Link>
-        </button>
+        <Link to='/destination'>
+          <button className="uppercase bg-[#313041] text-[12px] font-bold tracking-2 md:px-10 md:py-6 px-6 py-4 rounded-xl text-white">
+            Book tour now
+          </button>
+        </Link>
       </div>
     </section>
   );

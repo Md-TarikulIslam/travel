@@ -63,8 +63,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="logo" width={250} />
             <p className="mt-6 text-[#ffffffcc] ">
-              Quisque imperdiet sapien porttito the bibendum sellentesque the
-              commodo erat acar accumsa lobortis, enim diam the nesuen.
+            Discover the wonders of Patagonia with us — your gateway to nature's grandeur and unparalleled adventures. Let's turn your travel dreams into reality!
             </p>
             <div className="flex gap-2 mt-6">
               <a href="https://www.facebook.com/patagoniaexplore/" target="blank"> 
@@ -168,7 +167,7 @@ const Footer = () => {
           </div>
         </div>
       <div className="mt-6 md:mb-0 mb-6">
-        <p className="text-[#ffffffcc] text-sm text-center">©2023 <a target="blank" href="https://shakiqur-rahman-v2.netlify.app/#" className="text-blue-500">Shake's Team</a> All rights reserved.</p>
+        <p className="text-[#ffffffcc] text-sm text-center">©2023 <a target="_blank" href="https://www.facebook.com/always.iDev" className="text-blue-500">iDev</a> All rights reserved.</p>
       </div>
       </div>
     </footer>

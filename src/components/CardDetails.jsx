@@ -17,7 +17,18 @@ import {
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+import {
+    Dialog,
+    DialogBody,
+    Card,
+  } from "@material-tailwind/react";
+   
+
 const CardDetails = ({ details }) => {
+
+    const [open, setOpen] = useState(false);   
+    const handleOpen = () => setOpen((cur) => !cur);   
+
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -55,7 +66,7 @@ const CardDetails = ({ details }) => {
     return (
         <section className="max-width">
             <div className="md:flex">
-                <div className="md:mr-5 mb-20 md:mb-0 md:w-[75%]">
+                <div className="md:mr-5 mb-20 md:mb-0 w-full">
                     <p className="text-[#2095ae] text-[13px] uppercase mb-1 tracking-[2px] sm:tracking-[5px]">
                         Travel With Patagonia Explore
                     </p>
@@ -152,9 +163,9 @@ const CardDetails = ({ details }) => {
                         </p>
                     </div>
                 </div>
-                <div>
+                <div className="md:w-[65%]">
                     <h1 className="text-center bg-[#2095ae] text-white h-20 text-[27px] font-semibold leading-[80px]">
-                        Form <span className="ml-10">${details?.expense}</span>
+                        Book by - ${details?.expense}
                     </h1>
                     <form className="bg-[#f4f5f8] px-6 py-11">
                         <input
@@ -236,6 +247,30 @@ const CardDetails = ({ details }) => {
                             Book Now
                         </button>
                     </form>
+               {/* <div className="md:mt-48 mt-20">
+                        <img src={details?.details?.mapImg} className="border border-blue-600" alt="Map"/>
+                    </div> */}
+<div className="just-try md:mt-44 mt-20">
+      <Card
+        className="cursor-pointer overflow-hidden transition-opacity hover:opacity-90 rounded-none border border-blue-600 "
+        onClick={handleOpen}
+      >
+        <img
+          alt="map"
+          className="h-full w-full object-cover object-center"
+          src={details?.details?.mapImg}
+        />
+      </Card>
+       <Dialog size="lg" open={open} handler={handleOpen}>
+        <DialogBody>
+          <img
+            alt="nature"
+            className="lg:h-[80vh] w-full rounded-lg object-cover object-center"
+            src={details?.details?.mapImg}
+          />
+        </DialogBody>
+      </Dialog>
+                    </div>
                 </div>
             </div>
 
