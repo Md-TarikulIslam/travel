@@ -44,14 +44,11 @@ const CardDetails = ({ details }) => {
             !formData.fullName ||
             !formData.email ||
             !formData.date ||
-            !formData.people ||
-            !formData.enquire
+            !formData.people
         ) {
             toast("Please enter your information.");
             return;
         }
-
-        const stripe = await loadStripe(`${import.meta.env.VITE_STRIPE_KEY}`);
 
         const body = {
             title: details?.title + " - " + details?.country,
@@ -61,25 +58,9 @@ const CardDetails = ({ details }) => {
 
         localStorage.setItem("booking-details", JSON.stringify(body));
 
-        const response = await fetch(
-            `https://patagonia-explore-server.vercel.app/api/create-payment-intent`,
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    authorization: `Bearer ${localStorage.getItem(
-                        "travel-token",
-                    )}`,
-                },
-                body: JSON.stringify(body),
-            },
+        window.location.replace(
+            "https://buy.stripe.com/test_eVacPb6hGeC3dXibII",
         );
-
-        const session = await response.json();
-
-        await stripe.redirectToCheckout({
-            sessionId: session.id,
-        });
     };
 
     return (
