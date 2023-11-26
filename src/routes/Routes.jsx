@@ -48,8 +48,7 @@ const router = createBrowserRouter([
                 path: "/contact",
                 element: <ContactPage />,
             },
-           
-           
+
             {
                 path: "/dashboard",
                 element: <SubMain />,
@@ -71,11 +70,11 @@ const router = createBrowserRouter([
         ],
     },
     {
-        path: "/success",
+        path: "/payment-success",
         element: <PaymentSuccesspage />,
     },
     {
-        path: "/cancel",
+        path: "/payment-cancel",
         element: <PaymentCancelPage />,
     },
 ]);
