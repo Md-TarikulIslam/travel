@@ -14,6 +14,8 @@ import CardDetailsPage from "../pages/CardDetailsPage";
 import DashUsers from "../components/DashUsers";
 import PaymentSuccesspage from "../pages/PaymentSuccessPage";
 import PaymentCancelPage from "../pages/PaymentCancelPage";
+import ErrorPage from "../pages/ErrorPage";
+import RefundPolicy from "../components/RefundPolicy";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
                 path: "/contact",
                 element: <ContactPage />,
             },
+            {
+                path: "/refund-policy",
+                element: <RefundPolicy />,
+            },
 
             {
                 path: "/dashboard",
@@ -77,5 +83,9 @@ const router = createBrowserRouter([
         path: "/payment-cancel",
         element: <PaymentCancelPage />,
     },
+    {
+        path : '*',
+        element : <ErrorPage />
+    }
 ]);
 export default router;

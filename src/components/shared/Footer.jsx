@@ -111,6 +111,11 @@ const Footer = () => {
                   Gallery
                 </li>
               </Link>
+              <Link to="/refund-policy">
+                <li className=" list-disc hover:text-[#2095ae] duration-300 text-[#ffffffcc] mb-2">
+                  Refund Policy
+                </li>
+              </Link>
               <Link to="/contact">
                 <li className=" list-disc hover:text-[#2095ae] duration-300 text-[#ffffffcc] mb-2">
                   Contact
@@ -121,42 +126,42 @@ const Footer = () => {
           <div className=" md:mt-0 mt-10">
             <h2 className="text-xl font-semibold mb-6">Instagram Feed</h2>
             <div className="grid grid-cols-3 gap-3">
-              <Link to="#">
+              <Link to="https://www.instagram.com/patagoniaexplore/" target="blank">
                 <img
                   src={img1}
                   alt="Grid Image"
                   className=" rounded-md duration-300 cursor-pointer hover:scale-105"
                 />
               </Link>
-              <Link to="#">
+              <Link to="https://www.instagram.com/patagoniaexplore/" target="blank">
                 <img
                   src={img2}
                   alt="Grid Image"
                   className=" rounded-md duration-300 cursor-pointer hover:scale-105"
                 />
               </Link>
-              <Link to="#">
+              <Link to="https://www.instagram.com/patagoniaexplore/" target="blank">
                 <img
                   src={img3}
                   alt="Grid Image"
                   className=" rounded-md duration-300 cursor-pointer hover:scale-105"
                 />
               </Link>
-              <Link to="#">
+              <Link to="https://www.instagram.com/patagoniaexplore/" target="blank">
                 <img
                   src={img4}
                   alt="Grid Image"
                   className=" rounded-md duration-300 cursor-pointer hover:scale-105"
                 />
               </Link>
-              <Link to="#">
+              <Link to="https://www.instagram.com/patagoniaexplore/" target="blank">
                 <img
                   src={img5}
                   alt="Grid Image"
                   className=" rounded-md duration-300 cursor-pointer hover:scale-105"
                 />
               </Link>
-              <Link to="#">
+              <Link to="https://www.instagram.com/patagoniaexplore/" target="blank">
                 <img
                   src={img6}
                   alt="Grid Image"
@@ -167,7 +172,7 @@ const Footer = () => {
           </div>
         </div>
       <div className="mt-6 md:mb-0 mb-6">
-        <p className="text-[#ffffffcc] text-sm text-center">©2023 <a target="_blank"  href="https://shakiqur-rahman.netlify.app/#" className="text-blue-500">Shake's Team</a> All rights reserved.</p>
+        <p className="text-[#ffffffcc] text-sm text-center">©2023 <a target="_blank" href="https://shakiqur-rahman.netlify.app/#" className="text-blue-500">Shake's Team</a> All rights reserved.</p>
       </div>
       </div>
     </footer>
