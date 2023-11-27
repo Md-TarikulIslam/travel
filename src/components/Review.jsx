@@ -19,6 +19,7 @@ import {
 } from "@material-tailwind/react";
 import { toast } from "react-toastify";
 import { auth } from "../firebase.init";
+import { Link } from "react-router-dom";
 
 const allData = [
     {
@@ -238,13 +239,14 @@ const Review = () => {
                         </CardBody>
                     </Card>
                 </div>
-                <div className="flex-1 absolute -bottom-16 z-10 md:right-[24rem] lg:right-[32rem] mx-auto lg:mx-0 w-full md:w-0">
-                    <Button
+                <div className="absolute mx-auto right-32 md:right-36 lg:right-52 top-64 lg:top-28">
+                <Button
                         onClick={handleOpen}
-                        className=" whitespace-nowrap mb-3 text-white bg-[#1d355e]"
+                        className=" whitespace-nowrap mb-3 text-white bg-[#1d355e] "
                     >
                         Leave a Review
                     </Button>
+                </div>
                     <Dialog
                         open={open}
                         size="xs"
@@ -313,6 +315,8 @@ const Review = () => {
                             </DialogFooter>
                         </form>
                     </Dialog>
+                <div className="flex-1 absolute -bottom-28 z-10 md:right-[24rem] lg:right-[32rem] mx-auto lg:mx-0 w-full md:w-0">
+                    
                     <Card className="rounded-none h-[400px] lg:h-80 lg:w-[28rem] w-[20rem] mx-auto lg:mx-0 p-4">
                         <CardBody>
                             <div>
@@ -367,6 +371,7 @@ const Review = () => {
                                                             {data.name}
                                                         </p>
                                                     </div>
+                                                <Link to='/reviews'><Button className="text-white bg-[#1d355e]">See all</Button></Link>
                                                 </div>
                                             </div>
                                         );

@@ -14,6 +14,7 @@ import CardDetailsPage from "../pages/CardDetailsPage";
 import DashUsers from "../components/DashUsers";
 import PaymentSuccesspage from "../pages/PaymentSuccessPage";
 import PaymentCancelPage from "../pages/PaymentCancelPage";
+import  AllReviews  from "../components/AllReviews";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: "/gallery",
                 element: <GalleryPage />,
+            },
+            {
+                path: "/reviews",
+                element: <AllReviews />,
             },
             {
                 path: "/contact",
