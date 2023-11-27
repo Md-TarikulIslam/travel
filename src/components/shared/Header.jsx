@@ -132,7 +132,7 @@ export default function Header() {
                                 alt="avatar"
                                 variant="rounded"
                                 size="sm"
-                                className="ml-8"
+                                className="absolute top-4 right-16 lg:right-32 lg:top-[22px]"
                             />
                         </Link>
                     )}
@@ -180,6 +180,20 @@ export default function Header() {
             </div>
             <Collapse open={openNav} className="text-black bg-white rounded-xl">
                 {navList}
+                {/* {auth && user && (
+                        <Link to="/dashboard">
+                            <Avatar
+                                src={
+                                    user?.photoURL ||
+                                    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                }
+                                alt="avatar"
+                                variant="rounded"
+                                size="sm"
+                                className="ml-8 hidden lg:inline-block"
+                            />
+                        </Link>
+                    )} */}
 
                 <Link to={`${auth && user ? "/destination" : "/login"}`}>
                     <Button
