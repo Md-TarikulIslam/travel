@@ -183,7 +183,7 @@ const Review = () => {
             review: formData?.review,
         };
 
-        fetch("https://patagonia-explore-server.vercel.app/api/create-review", {
+        fetch("https://patagonia-explore-server.vercel.app/apgit i/create-review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

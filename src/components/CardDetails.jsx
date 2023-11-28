@@ -18,6 +18,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 
 import { Dialog, DialogBody, Card } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const CardDetails = ({ details }) => {
     const [open, setOpen] = useState(false);
@@ -238,10 +239,12 @@ const CardDetails = ({ details }) => {
                         >
                             Book Now
                         </button>
+                        <button
+                            className="px-5 py-3 hover:bg-[#2095ae] bg-white text-[#2095ae] hover:text-white duration-300 border hover:border-transparent border-[#2095ae] ml-5"
+                        >
+                            <Link to='/refund-policy'>Refund Policy</Link>
+                        </button>
                     </form>
-                    {/* <div className="md:mt-48 mt-20">
-                        <img src={details?.details?.mapImg} className="border border-blue-600" alt="Map"/>
-                    </div> */}
                     <div className="just-try md:mt-44 mt-20">
                         <Card
                             className="cursor-pointer overflow-hidden transition-opacity hover:opacity-90 rounded-none border border-blue-600 "
