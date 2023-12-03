@@ -46,7 +46,7 @@ export default function TravelCountries() {
                             <CardBody>
                                 <p className="uppercase tracking-widest text-xs text-[#04afd1]">travel countries</p>
                                 <p className="text-[#1d355e] font-bold text-3xl my-4">Argentina</p>
-                                <p className="text-[#848691] text-sm leading-loose">We provide you with interesting and exciting tours to different parts of the world. Orci varius natoque penatibus et magnis disney turien nascete ridiculus duru in the mus nellen.</p>
+                                <p className="text-[#848691] text-sm leading-loose">Argentina is one of South America's most iconic countries. Exciting Buenos Aires reveals the unique Argentinian atmosphere through culture and architecture. Mendoza can offer you some of the world's best wines.</p>
                                 <div className="grid grid-cols-3 sm:my-8 my-4 ">
                                     <div>
 
@@ -77,7 +77,7 @@ export default function TravelCountries() {
                         <CardBody>
                             <p className="uppercase tracking-widest text-xs text-[#04afd1]">travel countries</p>
                             <p className="text-[#1d355e] font-bold text-3xl my-4">Chile</p>
-                            <p className="text-[#848691] text-sm leading-loose">We provide you with interesting and exciting tours to different parts of the world. Orci varius natoque penatibus et.</p>
+                            <p className="text-[#848691] text-sm leading-loose">Chile is an awesome destination for those backpacking in South America with some of the world’s classic trekking routes through the craggy mountains of the Torres del Paine.</p>
                             <div className="flex justify-between  sm:my-6 my-4 ">
                                 <div className="flex-1">
 
@@ -106,7 +106,7 @@ export default function TravelCountries() {
                         <CardBody>
                             <p className="uppercase tracking-widest text-xs text-[#04afd1]">travel countries</p>
                             <p className="text-[#1d355e] font-bold text-3xl my-4">Brazil</p>
-                            <p className="text-[#848691] text-sm leading-loose">We provide you with interesting and exciting tours to different parts of the world.</p>
+                            <p className="text-[#848691] text-sm leading-loose">Brazil is a huge country in South America, famous for housing the majority of the Amazon rainforest. Travellers can also soak up Brazil’s rich culture and history when visiting one of the country’s vibrant cities like São Paulo and Rio de Janeiro.</p>
                             <div className="grid grid-cols-3 sm:my-8 my-4 ">
                                 <div>
 
