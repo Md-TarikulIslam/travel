@@ -91,8 +91,8 @@ const CheckoutForm = () => {
                         .then((res) => res.json())
                         .then((data) => {
                             navigate("/payment-success");
-                            fetch("http://localhost:5000/api/send-email",{
-                                method:"POST",
+                            fetch("http://localhost:5000/api/send-email", {
+                                method: "POST",
                                 headers: {
                                     "Content-Type": "application/json",
                                     authorization: `Bearer ${localStorage.getItem(
@@ -119,11 +119,11 @@ const CheckoutForm = () => {
                                     },
                                 }),
                             })
-                            .then(res =>res.json())
-                            .then(data =>{
-                                localStorage.removeItem("booking-details");
-                                toast("Order Confirmation Email Sent!")
-                            })
+                                .then(res => res.json())
+                                .then(data => {
+                                    localStorage.removeItem("booking-details");
+                                    toast("Order Confirmation Email Sent!")
+                                })
                         });
                 }
             }
