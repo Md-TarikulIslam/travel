@@ -8,6 +8,7 @@ import {
 } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const info = JSON.parse(localStorage.getItem("booking-details"));
 const email = info?.info?.email;
@@ -66,6 +67,7 @@ const CheckoutForm = () => {
                                 "travel-token",
                             )}`,
                         },
+
                         body: JSON.stringify({
                             userInfo: {
                                 name: info?.info?.fullName,
@@ -88,8 +90,40 @@ const CheckoutForm = () => {
                     })
                         .then((res) => res.json())
                         .then((data) => {
-                            localStorage.removeItem("booking-details");
                             navigate("/payment-success");
+                            fetch("http://localhost:5000/api/send-email",{
+                                method:"POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                    authorization: `Bearer ${localStorage.getItem(
+                                        "travel-token",
+                                    )}`,
+                                },
+                                body: JSON.stringify({
+                                    userInfo: {
+                                        name: info?.info?.fullName,
+                                        email: info?.info?.email,
+                                    },
+                                    serviceInfo: {
+                                        title: info?.title,
+                                        price: info?.price * person,
+                                    },
+                                    paymentInfo: {
+                                        status: "Paid",
+                                        transactionID: result.paymentIntent.id,
+                                    },
+                                    orderInfo: {
+                                        date: info?.info?.date,
+                                        numberOfPeople: info?.info?.people,
+                                        comments: info?.info?.enquire,
+                                    },
+                                }),
+                            })
+                            .then(res =>res.json())
+                            .then(data =>{
+                                localStorage.removeItem("booking-details");
+                                toast("Order Confirmation Email Sent!")
+                            })
                         });
                 }
             }
