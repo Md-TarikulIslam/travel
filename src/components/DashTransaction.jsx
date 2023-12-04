@@ -1,6 +1,7 @@
 import { Card, Typography } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { auth } from "../firebase.init";
+import { toast } from "react-toastify";
 
 const TABLE_HEAD = [
     "Name",
@@ -19,7 +20,7 @@ export default function DashTransaction() {
     const [user, setUser] = useState({});
 
     useEffect(() => {
-        fetch(`https://patagonia-explore-server.vercel.app/api/user/${auth.currentUser?.email}`, {
+        fetch(`http://localhost:5000/api/user/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "content-type": "application/json",
@@ -33,7 +34,7 @@ export default function DashTransaction() {
     }, []);
 
     if (user?.role === "admin") {
-        fetch("https://patagonia-explore-server.vercel.app/api/orders", {
+        fetch("http://localhost:5000/api/orders", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -43,7 +44,7 @@ export default function DashTransaction() {
             .then((response) => response.json())
             .then((data) => setOrders(data));
     } else {
-        fetch(`https://patagonia-explore-server.vercel.app/api/order/${auth.currentUser?.email}`, {
+        fetch(`http://localhost:5000/api/order/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -52,6 +53,48 @@ export default function DashTransaction() {
         })
             .then((response) => response.json())
             .then((data) => setOrders(data));
+    }
+
+
+    const handleRefund = (order) => {
+
+        const UpdatedData = {
+            orderId: order._id,
+            refundStatus: 'refund'
+        }
+
+        fetch(`http://localhost:5000/api/orders/update-order`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                authorization: `Bearer ${localStorage.getItem("travel-token")}`,
+            },
+            body: JSON.stringify(UpdatedData)
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                toast("Your request is accepted. Please wait...")
+            });
+    }
+
+    const handleGiveRefund = (order) => {
+        const UpdatedData = {
+            orderId: order._id,
+            refundStatus: 'refunded'
+        }
+
+        fetch(`http://localhost:5000/api/orders/update-order`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                authorization: `Bearer ${localStorage.getItem("travel-token")}`,
+            },
+            body: JSON.stringify(UpdatedData)
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                toast("Fund is Refunded...")
+            });
     }
 
     return (
@@ -150,17 +193,72 @@ export default function DashTransaction() {
                                     {order.orderInfo.comments}
                                 </Typography>
                             </td>
-                            <td className="p-4">
-                                <Typography
-                                    as="a"
-                                    href="#"
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-medium"
-                                >
-                                    Edit
-                                </Typography>
-                            </td>
+
+                            {user?.role === 'user' ? (
+                                user?.role === 'user' && order?.refundInfo?.status === 'completed' ?
+                                    <td className="p-4">
+                                        <button onClick={() => handleRefund(order)} className=" bg-blue-300 p-2 text-xs rounded-md">Make Refund</button>
+                                    </td>
+                                    :
+                                    user?.role === 'user' && order?.refundInfo?.status === 'refund' ?
+                                        <td className="p-4">
+                                            <Typography
+                                                as="a"
+                                                href="#"
+                                                variant="small"
+                                                color="blue-gray"
+                                                className="font-medium"
+                                            >
+                                                Refund Pending...
+                                            </Typography>
+                                        </td>
+                                        :
+                                        user?.role === 'user' && order?.refundInfo?.status === 'refunded' ?
+                                            <td className="p-4">
+                                                <Typography
+                                                    as="a"
+                                                    href="#"
+                                                    variant="small"
+                                                    color="blue-gray"
+                                                    className="font-medium"
+                                                >
+                                                    Payment Refunded
+                                                </Typography>
+                                            </td>
+                                            :
+                                            // Add a default case if none of the conditions match
+                                            <td className="p-4">
+                                                <Typography
+                                                    as="a"
+                                                    href="#"
+                                                    variant="small"
+                                                    color="blue-gray"
+                                                    className="font-medium"
+                                                >
+                                                    Default Text
+                                                </Typography>
+                                            </td>)
+                                :
+                                (
+                                    user?.role === 'admin' && order?.refundInfo?.status === 'refund' ?
+                                        <td className="p-4">
+                                            <button onClick={() => handleGiveRefund(order)} className=" bg-blue-300 p-2 text-xs rounded-md">Give Refund</button>
+                                        </td>
+                                        :
+                                        <td className="p-4">
+                                            <Typography
+                                                as="a"
+                                                href="#"
+                                                variant="small"
+                                                color="blue-gray"
+                                                className="font-medium"
+                                            >
+                                                completed
+                                            </Typography>
+                                        </td>
+
+                                )
+                            }
                         </tr>
                     ))}
                 </tbody>

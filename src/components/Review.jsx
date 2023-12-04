@@ -121,21 +121,25 @@ const allData = [
 
 const Review = () => {
     const [isVideoPlaying, setVideoPlaying] = useState(false);
-    const [loading, setLoading] = useState(false);
     const [user, setUser] = useState({});
 
-    fetch(
-        `https://patagonia-explore-server.vercel.app/api/user/${auth.currentUser?.email}`,
-        {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                authorization: `Bearer ${localStorage.getItem("travel-token")}`,
-            },
-        },
-    )
-        .then((response) => response.json())
-        .then((data) => setUser(data));
+    useEffect(() => {
+        auth?.currentUser &&
+            fetch(
+                `http://localhost:5000/api/user/${auth?.currentUser?.email}`,
+                {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        authorization: `Bearer ${localStorage.getItem(
+                            "travel-token",
+                        )}`,
+                    },
+                },
+            )
+                .then((response) => response.json())
+                .then((data) => setUser(data));
+    }, []);
 
     const playVideo = () => {
         setVideoPlaying(true);
@@ -169,6 +173,12 @@ const Review = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        if (!auth.currentUser) {
+            toast.error("Please login first.");
+            handleOpen();
+            return;
+        }
+
         if (!formData.rating || !formData.review) {
             toast.error("Please fill in all fields.");
             handleOpen();
@@ -183,7 +193,7 @@ const Review = () => {
             review: formData?.review,
         };
 
-        fetch("https://patagonia-explore-server.vercel.app/apgit i/create-review", {
+        fetch("http://localhost:5000/apgit i/create-review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -240,83 +250,82 @@ const Review = () => {
                     </Card>
                 </div>
                 <div className="absolute mx-auto right-32 md:right-36 lg:right-52 top-64 lg:top-28">
-                <Button
+                    <Button
                         onClick={handleOpen}
                         className=" whitespace-nowrap mb-3 text-white bg-[#1d355e] "
                     >
                         Leave a Review
                     </Button>
                 </div>
-                    <Dialog
-                        open={open}
-                        size="xs"
-                        handler={handleOpen}
-                        className="p-3"
-                    >
-                        <div className="flex items-center justify-between">
-                            <DialogHeader className="flex flex-col items-start">
-                                {" "}
-                                <Typography className="mb-1" variant="h4">
-                                    Leave Your Review
-                                </Typography>
-                            </DialogHeader>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                                className="mr-3 h-6 w-6 cursor-pointer hover:text-red-700"
-                                onClick={handleOpen}
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
-                        </div>
-                        <form onSubmit={handleSubmit}>
-                            <DialogBody>
-                                <div className="grid gap-8">
-                                    <div className="flex flex-col items-center">
-                                        <p className="mb-1 font-normal text-lg text-black">
-                                            Rate Us
-                                        </p>
-                                        <Rating
-                                            type="number"
-                                            value={formData.rating}
-                                            name="rating"
-                                            onChange={handleRatingChange}
-                                        />
-                                    </div>
-                                    <Textarea
-                                        type="text"
-                                        value={formData.review}
-                                        name="review"
-                                        onChange={handleInputChange}
-                                        label="Message"
+                <Dialog
+                    open={open}
+                    size="xs"
+                    handler={handleOpen}
+                    className="p-3"
+                >
+                    <div className="flex items-center justify-between">
+                        <DialogHeader className="flex flex-col items-start">
+                            {" "}
+                            <Typography className="mb-1" variant="h4">
+                                Leave Your Review
+                            </Typography>
+                        </DialogHeader>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            className="mr-3 h-6 w-6 cursor-pointer hover:text-red-700"
+                            onClick={handleOpen}
+                        >
+                            <path
+                                fillRule="evenodd"
+                                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                clipRule="evenodd"
+                            />
+                        </svg>
+                    </div>
+                    <form onSubmit={handleSubmit}>
+                        <DialogBody>
+                            <div className="grid gap-8">
+                                <div className="flex flex-col items-center">
+                                    <p className="mb-1 font-normal text-lg text-black">
+                                        Rate Us
+                                    </p>
+                                    <Rating
+                                        type="number"
+                                        value={formData.rating}
+                                        name="rating"
+                                        onChange={handleRatingChange}
                                     />
                                 </div>
-                            </DialogBody>
-                            <DialogFooter className="space-x-2">
-                                <Button
-                                    variant="text"
-                                    color="gray"
-                                    onClick={handleOpen}
-                                >
-                                    cancel
-                                </Button>
-                                <Button
-                                    type="submit"
-                                    variant="gradient"
-                                    color="gray"
-                                >
-                                    send message
-                                </Button>
-                            </DialogFooter>
-                        </form>
-                    </Dialog>
+                                <Textarea
+                                    type="text"
+                                    value={formData.review}
+                                    name="review"
+                                    onChange={handleInputChange}
+                                    label="Message"
+                                />
+                            </div>
+                        </DialogBody>
+                        <DialogFooter className="space-x-2">
+                            <Button
+                                variant="text"
+                                color="gray"
+                                onClick={handleOpen}
+                            >
+                                cancel
+                            </Button>
+                            <Button
+                                type="submit"
+                                variant="gradient"
+                                color="gray"
+                            >
+                                send message
+                            </Button>
+                        </DialogFooter>
+                    </form>
+                </Dialog>
                 <div className="flex-1 absolute -bottom-28 z-10 md:right-[24rem] lg:right-[32rem] mx-auto lg:mx-0 w-full md:w-0">
-                    
                     <Card className="rounded-none h-[400px] lg:h-80 lg:w-[28rem] w-[20rem] mx-auto lg:mx-0 p-4">
                         <CardBody>
                             <div>
@@ -371,7 +380,11 @@ const Review = () => {
                                                             {data.name}
                                                         </p>
                                                     </div>
-                                                <Link to='/reviews'><Button className="text-white bg-[#1d355e]">See all</Button></Link>
+                                                    <Link to="/reviews">
+                                                        <Button className="text-white bg-[#1d355e]">
+                                                            See all
+                                                        </Button>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         );

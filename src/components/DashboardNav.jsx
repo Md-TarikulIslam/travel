@@ -25,7 +25,7 @@ const DashboardNav = () => {
     };
 
     useEffect(() => {
-        fetch(`https://patagonia-explore-server.vercel.app/api/user/${auth.currentUser?.email}`, {
+        fetch(`http://localhost:5000/api/user/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "content-type": "application/json",

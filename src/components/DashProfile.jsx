@@ -5,18 +5,17 @@ import { auth } from "../firebase.init";
 const DashProfile = () => {
     const [user, setUser] = useState({});
 
-    fetch(
-        `https://patagonia-explore-server.vercel.app/api/user/${auth.currentUser?.email}`,
-        {
+    useEffect(() => {
+        fetch(`http://localhost:5000/api/user/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
                 authorization: `Bearer ${localStorage.getItem("travel-token")}`,
             },
-        },
-    )
-        .then((response) => response.json())
-        .then((data) => setUser(data));
+        })
+            .then((response) => response.json())
+            .then((data) => setUser(data));
+    }, []);
 
     return (
         <div>

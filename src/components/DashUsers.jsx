@@ -6,7 +6,7 @@ const TABLE_HEAD = ["Name", "Email", "Phone", "Address", "Action"];
 export default function DashUsers() {
     const [users, setUsers] = useState([]);
 
-    fetch("https://patagonia-explore-server.vercel.app/api/users", {
+    fetch("http://localhost:5000/api/users", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

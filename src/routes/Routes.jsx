@@ -17,6 +17,7 @@ import PaymentCancelPage from "../pages/PaymentCancelPage";
 import ErrorPage from "../pages/ErrorPage";
 import RefundPolicy from "../components/RefundPolicy";
 import  AllReviews  from "../components/AllReviews";
+import Payment from "../pages/Payment";
 
 const router = createBrowserRouter([
     {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
                 ],
             },
         ],
+    },
+    {
+        path:"/payment",
+        element: <Payment />
     },
     {
         path: "/payment-success",

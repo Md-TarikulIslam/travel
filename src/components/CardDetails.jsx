@@ -4,7 +4,6 @@ import { MdOutlinePersonOutline } from "react-icons/md";
 import { VscLocation } from "react-icons/vsc";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdDone, MdClose } from "react-icons/md";
-import { loadStripe } from "@stripe/stripe-js";
 import {
     Timeline,
     TimelineItem,
@@ -16,11 +15,12 @@ import {
 } from "@material-tailwind/react";
 import { useState } from "react";
 import { toast } from "react-toastify";
-
 import { Dialog, DialogBody, Card } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../firebase.init";
 
 const CardDetails = ({ details }) => {
+    const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen((cur) => !cur);
 
@@ -34,6 +34,11 @@ const CardDetails = ({ details }) => {
 
     const makePayment = async (e) => {
         e.preventDefault();
+
+        if (!auth.currentUser) {
+            navigate("/login");
+            return;
+        }
 
         if (
             !formData.fullName ||
@@ -51,9 +56,12 @@ const CardDetails = ({ details }) => {
             info: formData,
         };
 
-        localStorage.setItem("booking-details", JSON.stringify(body));
-
-        window.location.replace(`${details.payment_link}`); // "https://buy.stripe.com/test_eVacPb6hGeC3dXibII"
+        try {
+            localStorage.setItem("booking-details", JSON.stringify(body));
+            window.location.replace("/payment");
+        } catch (error) {
+            console.error("Error storing data in local storage:", error);
+        }
     };
 
     return (
@@ -98,7 +106,7 @@ const CardDetails = ({ details }) => {
                         {details?.details?.desq1}
                     </p>
                     <p className="mt-7 text-[#676977] leading-[1.75em]">
-                        {details.day} Days {details?.night}Nights, Group:{" "}
+                        {details?.day} Days {details?.night}Nights, Group:{" "}
                         {details?.person}
                         +, {details?.country}
                     </p>
@@ -239,10 +247,8 @@ const CardDetails = ({ details }) => {
                         >
                             Book Now
                         </button>
-                        <button
-                            className="px-5 py-3 hover:bg-[#2095ae] bg-white text-[#2095ae] hover:text-white duration-300 border hover:border-transparent border-[#2095ae] ml-5"
-                        >
-                            <Link to='/refund-policy'>Refund Policy</Link>
+                        <button className="px-5 py-3 hover:bg-[#2095ae] bg-white text-[#2095ae] hover:text-white duration-300 border hover:border-transparent border-[#2095ae] ml-5">
+                            <Link to="/refund-policy">Refund Policy</Link>
                         </button>
                     </form>
                     <div className="just-try md:mt-44 mt-20">
@@ -275,7 +281,7 @@ const CardDetails = ({ details }) => {
                     Full Itinerary :
                 </h3>
                 <Timeline className="sm:ml-10 grid md:grid-cols-2">
-                    {details.itenary.map((data) => (
+                    {details?.itenary.map((data) => (
                         <TimelineItem key={data.id}>
                             <TimelineConnector />
                             <TimelineHeader className="h-3">

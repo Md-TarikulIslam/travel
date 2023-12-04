@@ -3,7 +3,6 @@ import {
     Button,
     Collapse,
     IconButton,
-    MobileNav,
     Typography,
 } from "@material-tailwind/react";
 import React, { useEffect, useState } from "react";
@@ -23,7 +22,7 @@ export default function Header() {
                 setUser(user);
             }
         });
-    });
+    }, []);
 
     useEffect(() => {
         window.addEventListener(

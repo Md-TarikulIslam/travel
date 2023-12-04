@@ -33,7 +33,7 @@ const LoginPage = () => {
             avatar: response?.user?.photoURL,
         };
 
-        fetch("https://patagonia-explore-server.vercel.app/api/signup", {
+        fetch("http://localhost:5000/api/signup", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -54,7 +54,7 @@ const LoginPage = () => {
                 await createUserWithEmailAndPassword(auth, email, password)
                     .then(() => {
                         fetch(
-                            "https://patagonia-explore-server.vercel.app/api/signup",
+                            "http://localhost:5000/api/signup",
                             {
                                 method: "POST",
                                 headers: {
@@ -83,7 +83,7 @@ const LoginPage = () => {
                 await signInWithEmailAndPassword(auth, email, password)
                     .then(() => {
                         fetch(
-                            "https://patagonia-explore-server.vercel.app/api/signin",
+                            "http://localhost:5000/api/signin",
                             {
                                 method: "POST",
                                 headers: {
@@ -96,6 +96,7 @@ const LoginPage = () => {
                         )
                             .then((res) => res.json())
                             .then((data) => {
+                                console.log(data)
                                 localStorage.setItem(
                                     "travel-token",
                                     data.token,
