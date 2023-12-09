@@ -10,7 +10,7 @@ import img1 from "../assets/images/review/3.jpg";
 import img2 from "../assets/images/review/2.jpg";
 import img3 from "../assets/images/review/1.jpeg";
 import img4 from "../assets/images/review/4.jpg";
-import { MdOutlinePlayCircleFilled, MdStarRate } from "react-icons/md";
+import {  MdStarRate } from "react-icons/md";
 import { ScrollRestoration } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -165,7 +165,7 @@ export default function AllReviews() {
                 </h1>
             </div>
             <div className="max-w-screen-xl mx-auto grid-cols-1 md:grid-cols-2 grid lg:grid-cols-4 py-20 gap-4 px-4 lg:px-0">
-                {allData.map((data, index) => {
+                {allData?.map((data, index) => {
                     return (
                         <Card
                             key={index + 1}
