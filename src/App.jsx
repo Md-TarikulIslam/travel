@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
     return (
         <>
-            <RouterProvider basename='/' router={router}></RouterProvider>
+            <RouterProvider router={router}></RouterProvider>
             <ToastContainer position="bottom-center" />
         </>
     );

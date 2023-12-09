@@ -6,7 +6,7 @@ import img5 from "../assets/images/tours/5.jpg";
 import img6 from "../assets/images/tours/6.jpg";
 import Glaciers2 from "../assets/images/gallery/2.jpg";
 import Glaciers3 from "../assets/images/gallery/13.jpg";
-import delPaine2 from "../assets/images/banner/DiscoverImg.jpg";
+import delPaine2 from "../assets/images/gallery/35.jpg";
 import delPaine3 from "../assets/images/gallery/5.jpg";
 import wTrek2 from "../assets/images/tours/w-trek2.jpg";
 import wTrek3 from "../assets/images/tours/w-trek3.jpg";
