@@ -55,13 +55,11 @@ export default function DashTransaction() {
             .then((data) => setOrders(data));
     }
 
-
     const handleRefund = (order) => {
-
         const UpdatedData = {
             orderId: order._id,
-            refundStatus: 'refund'
-        }
+            refundStatus: "refund",
+        };
 
         fetch(`http://localhost:5000/api/orders/update-order`, {
             method: "PUT",
@@ -69,19 +67,19 @@ export default function DashTransaction() {
                 "Content-Type": "application/json",
                 authorization: `Bearer ${localStorage.getItem("travel-token")}`,
             },
-            body: JSON.stringify(UpdatedData)
+            body: JSON.stringify(UpdatedData),
         })
             .then((response) => response.json())
             .then((data) => {
-                toast("Your request is accepted. Please wait...")
+                toast("Your request is accepted. Please wait...");
             });
-    }
+    };
 
     const handleGiveRefund = (order) => {
         const UpdatedData = {
             orderId: order._id,
-            refundStatus: 'refunded'
-        }
+            refundStatus: "refunded",
+        };
 
         fetch(`http://localhost:5000/api/orders/update-order`, {
             method: "PUT",
@@ -89,13 +87,13 @@ export default function DashTransaction() {
                 "Content-Type": "application/json",
                 authorization: `Bearer ${localStorage.getItem("travel-token")}`,
             },
-            body: JSON.stringify(UpdatedData)
+            body: JSON.stringify(UpdatedData),
         })
             .then((response) => response.json())
             .then((data) => {
-                toast("Fund is Refunded...")
+                toast("Fund is Refunded...");
             });
-    }
+    };
 
     return (
         <Card className="h-full w-full overflow-scroll md:overflow-hidden">
@@ -119,88 +117,109 @@ export default function DashTransaction() {
                     </tr>
                 </thead>
                 <tbody>
-                    {orders.length > 0 && orders?.map((order, index) => (
-                        <tr key={index} className="even:bg-blue-gray-50/50">
-                            <td className="p-4">
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                    {order?.userInfo.name}
-                                </Typography>
-                            </td>
-                            <td className="p-4">
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                    {order?.userInfo.email}
-                                </Typography>
-                            </td>
-                            <td className="p-4">
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                    {order?.serviceInfo.title}
-                                </Typography>
-                            </td>
-                            <td className="p-4">
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                    {order.serviceInfo.price}
-                                </Typography>
-                            </td>
-                            <td className="p-4">
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                    {order.paymentInfo.status}
-                                </Typography>
-                            </td>
-                            <td className="p-4">
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                    {order.orderInfo.numberOfPeople}
-                                </Typography>
-                            </td>
-                            <td className="p-4">
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                    {order.orderInfo.date}
-                                </Typography>
-                            </td>
-                            <td className="p-4">
-                                <Typography
-                                    variant="small"
-                                    color="blue-gray"
-                                    className="font-normal"
-                                >
-                                    {order.orderInfo.comments}
-                                </Typography>
-                            </td>
+                    {orders.length === 0 && (
+                        <div className="w-full h-full flex justify-center items-center py-4">
+                            <Typography
+                                variant="small"
+                                color="blue-gray"
+                                className="font-normal text-center"
+                            >
+                                No Transactions Found!
+                            </Typography>
+                        </div>
+                    )}
+                    {orders.length > 0 &&
+                        orders?.map((order, index) => (
+                            <tr key={index} className="even:bg-blue-gray-50/50">
+                                <td className="p-4">
+                                    <Typography
+                                        variant="small"
+                                        color="blue-gray"
+                                        className="font-normal"
+                                    >
+                                        {order?.userInfo.name}
+                                    </Typography>
+                                </td>
+                                <td className="p-4">
+                                    <Typography
+                                        variant="small"
+                                        color="blue-gray"
+                                        className="font-normal"
+                                    >
+                                        {order?.userInfo.email}
+                                    </Typography>
+                                </td>
+                                <td className="p-4">
+                                    <Typography
+                                        variant="small"
+                                        color="blue-gray"
+                                        className="font-normal"
+                                    >
+                                        {order?.serviceInfo.title}
+                                    </Typography>
+                                </td>
+                                <td className="p-4">
+                                    <Typography
+                                        variant="small"
+                                        color="blue-gray"
+                                        className="font-normal"
+                                    >
+                                        {order.serviceInfo.price}
+                                    </Typography>
+                                </td>
+                                <td className="p-4">
+                                    <Typography
+                                        variant="small"
+                                        color="blue-gray"
+                                        className="font-normal"
+                                    >
+                                        {order.paymentInfo.status}
+                                    </Typography>
+                                </td>
+                                <td className="p-4">
+                                    <Typography
+                                        variant="small"
+                                        color="blue-gray"
+                                        className="font-normal"
+                                    >
+                                        {order.orderInfo.numberOfPeople}
+                                    </Typography>
+                                </td>
+                                <td className="p-4">
+                                    <Typography
+                                        variant="small"
+                                        color="blue-gray"
+                                        className="font-normal"
+                                    >
+                                        {order.orderInfo.date}
+                                    </Typography>
+                                </td>
+                                <td className="p-4">
+                                    <Typography
+                                        variant="small"
+                                        color="blue-gray"
+                                        className="font-normal"
+                                    >
+                                        {order.orderInfo.comments}
+                                    </Typography>
+                                </td>
 
-                            {user?.role === 'user' ? (
-                                user?.role === 'user' && order?.refundInfo?.status === 'completed' ?
-                                    <td className="p-4">
-                                        <button onClick={() => handleRefund(order)} className=" bg-blue-300 p-2 text-xs rounded-md">Make Refund</button>
-                                    </td>
-                                    :
-                                    user?.role === 'user' && order?.refundInfo?.status === 'refund' ?
+                                {user?.role === "user" ? (
+                                    user?.role === "user" &&
+                                    order?.refundInfo?.status ===
+                                        "completed" ? (
+                                        <td className="p-4">
+                                            <button
+                                                onClick={() =>
+                                                    handleRefund(order)
+                                                }
+                                                className=" bg-blue-300 p-2 text-xs rounded-md"
+                                            >
+                                                Make Refund
+                                            </button>
+                                        </td>
+                                    ) : user?.role === "user" &&
+                                      order?.refundInfo?.status === "refund" ? (
                                         <td className="p-4">
                                             <Typography
                                                 as="a"
@@ -212,39 +231,9 @@ export default function DashTransaction() {
                                                 Refund Pending...
                                             </Typography>
                                         </td>
-                                        :
-                                        user?.role === 'user' && order?.refundInfo?.status === 'refunded' ?
-                                            <td className="p-4">
-                                                <Typography
-                                                    as="a"
-                                                    href="#"
-                                                    variant="small"
-                                                    color="blue-gray"
-                                                    className="font-medium"
-                                                >
-                                                    Payment Refunded
-                                                </Typography>
-                                            </td>
-                                            :
-                                            // Add a default case if none of the conditions match
-                                            <td className="p-4">
-                                                <Typography
-                                                    as="a"
-                                                    href="#"
-                                                    variant="small"
-                                                    color="blue-gray"
-                                                    className="font-medium"
-                                                >
-                                                    Default Text
-                                                </Typography>
-                                            </td>)
-                                :
-                                (
-                                    user?.role === 'admin' && order?.refundInfo?.status === 'refund' ?
-                                        <td className="p-4">
-                                            <button onClick={() => handleGiveRefund(order)} className=" bg-blue-300 p-2 text-xs rounded-md">Give Refund</button>
-                                        </td>
-                                        :
+                                    ) : user?.role === "user" &&
+                                      order?.refundInfo?.status ===
+                                          "refunded" ? (
                                         <td className="p-4">
                                             <Typography
                                                 as="a"
@@ -253,14 +242,50 @@ export default function DashTransaction() {
                                                 color="blue-gray"
                                                 className="font-medium"
                                             >
-                                                completed
+                                                Payment Refunded
                                             </Typography>
                                         </td>
-
-                                )
-                            }
-                        </tr>
-                    ))}
+                                    ) : (
+                                        // Add a default case if none of the conditions match
+                                        <td className="p-4">
+                                            <Typography
+                                                as="a"
+                                                href="#"
+                                                variant="small"
+                                                color="blue-gray"
+                                                className="font-medium"
+                                            >
+                                                Default Text
+                                            </Typography>
+                                        </td>
+                                    )
+                                ) : user?.role === "admin" &&
+                                  order?.refundInfo?.status === "refund" ? (
+                                    <td className="p-4">
+                                        <button
+                                            onClick={() =>
+                                                handleGiveRefund(order)
+                                            }
+                                            className=" bg-blue-300 p-2 text-xs rounded-md"
+                                        >
+                                            Give Refund
+                                        </button>
+                                    </td>
+                                ) : (
+                                    <td className="p-4">
+                                        <Typography
+                                            as="a"
+                                            href="#"
+                                            variant="small"
+                                            color="blue-gray"
+                                            className="font-medium"
+                                        >
+                                            completed
+                                        </Typography>
+                                    </td>
+                                )}
+                            </tr>
+                        ))}
                 </tbody>
             </table>
         </Card>
