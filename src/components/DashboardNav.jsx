@@ -25,7 +25,7 @@ const DashboardNav = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/user/${auth.currentUser?.email}`, {
+        fetch(`https://server.patagoniaexplore.com/api/user/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "content-type": "application/json",

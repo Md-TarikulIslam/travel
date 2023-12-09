@@ -6,7 +6,7 @@ const DashProfile = () => {
     const [user, setUser] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/user/${auth.currentUser?.email}`, {
+        fetch(`https://server.patagoniaexplore.com/api/user/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

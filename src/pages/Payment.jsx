@@ -37,7 +37,7 @@ const CheckoutForm = () => {
                 setPaymentError(error.message);
             } else {
                 const response = await axios.post(
-                    "http://localhost:5000/api/create-payment-intent",
+                    "https://server.patagoniaexplore.com/api/create-payment-intent",
                     {
                         amount: parseFloat(amount) * person * 100,
                         email,
@@ -59,7 +59,7 @@ const CheckoutForm = () => {
                     setAmount("");
                     setPaymentError(null);
 
-                    fetch("http://localhost:5000/api/create-order", {
+                    fetch("https://server.patagoniaexplore.com/api/create-order", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const CheckoutForm = () => {
                         .then((res) => res.json())
                         .then((data) => {
                             navigate("/payment-success");
-                            fetch("http://localhost:5000/api/send-email", {
+                            fetch("https://server.patagoniaexplore.com/api/send-email", {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json",

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 // info &&
-//     fetch("http://localhost:5000/api/create-order", {
+//     fetch("https://server.patagoniaexplore.com/api/create-order", {
 //         method: "POST",
 //         headers: {
 //             "Content-Type": "application/json",

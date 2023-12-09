@@ -133,7 +133,7 @@ export default function AllReviews() {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/reviews`, {
+        fetch(`https://server.patagoniaexplore.com/api/reviews`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
