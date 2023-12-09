@@ -6,9 +6,9 @@ import {
     Avatar,
 } from "@material-tailwind/react";
 import img from "../assets/images/destination/destination.jpg";
-import img3 from "../assets/images/review/1.jpeg";
-import img2 from "../assets/images/review/2.jpg";
 import img1 from "../assets/images/review/3.jpg";
+import img2 from "../assets/images/review/2.jpg";
+import img3 from "../assets/images/review/1.jpeg";
 import img4 from "../assets/images/review/4.jpg";
 import { MdOutlinePlayCircleFilled, MdStarRate } from "react-icons/md";
 import { ScrollRestoration } from "react-router-dom";
@@ -60,7 +60,7 @@ const allData = [
         ],
         details:
             "Thank you Himu & Patagonia Explore for your work in setting up our unique vacation to Chile including all the details which made it stress free. You helped us create our ideal trip!!",
-        name: "Kimberley S.",
+        name: "K Jhon.",
         img: img2,
     },
     {
