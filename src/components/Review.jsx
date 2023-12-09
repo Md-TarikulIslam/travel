@@ -193,7 +193,7 @@ const Review = () => {
             review: formData?.review,
         };
 
-        fetch("http://localhost:5000/apgit i/create-review", {
+        fetch("http://localhost:5000/api/create-review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
