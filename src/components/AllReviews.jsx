@@ -207,7 +207,7 @@ export default function AllReviews() {
                         </Card>
                     );
                 })}
-                {reviews.map((data, index) => {
+                {reviews?.map((data, index) => {
                     return (
                         <Card
                             key={index + 1}
@@ -222,7 +222,7 @@ export default function AllReviews() {
                                 <Avatar
                                     size="lg"
                                     variant="circular"
-                                    src={data.avatar}
+                                    src={data?.avatar}
                                     alt="tania andrew"
                                 />
                                 <div className="flex w-full flex-col gap-0.5">
@@ -231,10 +231,10 @@ export default function AllReviews() {
                                             className="text-lg"
                                             color="blue-gray"
                                         >
-                                            {data.name}
+                                            {data?.name}
                                         </Typography>
                                         <div className="5 flex items-center gap-0">
-                                            {data.rating === 5 && (
+                                            {data?.rating === 5 && (
                                                 <span className="text-yellow-700 text-lg flex">
                                                     <MdStarRate />{" "}
                                                     <MdStarRate />{" "}
@@ -243,7 +243,7 @@ export default function AllReviews() {
                                                     <MdStarRate />
                                                 </span>
                                             )}
-                                            {data.rating === 4 && (
+                                            {data?.rating === 4 && (
                                                 <span className="text-yellow-700 text-lg flex">
                                                     <MdStarRate />{" "}
                                                     <MdStarRate />{" "}
@@ -251,7 +251,7 @@ export default function AllReviews() {
                                                     <MdStarRate />
                                                 </span>
                                             )}
-                                            {data.rating === 3 && (
+                                            {data?.rating === 3 && (
                                                 <span className="text-yellow-700 text-lg flex">
                                                     <MdStarRate />{" "}
                                                     <MdStarRate />{" "}
