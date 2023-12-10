@@ -33,7 +33,7 @@ const LoginPage = () => {
             avatar: response?.user?.photoURL,
         };
 
-        fetch("http://localhost:5000/api/signup", {
+        fetch("https://server.patagoniaexplore.com/api/signup", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -54,7 +54,7 @@ const LoginPage = () => {
                 await createUserWithEmailAndPassword(auth, email, password)
                     .then(() => {
                         fetch(
-                            "http://localhost:5000/api/signup",
+                            "https://server.patagoniaexplore.com/api/signup",
                             {
                                 method: "POST",
                                 headers: {
@@ -83,7 +83,7 @@ const LoginPage = () => {
                 await signInWithEmailAndPassword(auth, email, password)
                     .then(() => {
                         fetch(
-                            "http://localhost:5000/api/signin",
+                            "https://server.patagoniaexplore.com/api/signin",
                             {
                                 method: "POST",
                                 headers: {

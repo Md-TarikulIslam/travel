@@ -25,7 +25,7 @@ const DashboardNav = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/user/${auth.currentUser?.email}`, {
+        fetch(`https://server.patagoniaexplore.com/api/user/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "content-type": "application/json",
@@ -39,7 +39,7 @@ const DashboardNav = () => {
     }, []);
 
     return (
-        <div className="">
+        <div>
             <div className="relative bg-black">
                 <div className=" bg_overlay">
                     <img
@@ -57,13 +57,13 @@ const DashboardNav = () => {
                     </h1>
                 </div>
             </div>
-            <div className="max-w-screen-lg mx-auto ">
-                <div className="flex px-2 lg:px-0  items-center lg:gap-4 justify-center py-10 ">
+            <div className="max-w-screen-lg mx-auto">
+                <div className="flex flex-wrap px-2 lg:px-0  items-center sm:gap-4 gap-3 justify-center py-10 ">
                     <div>
                         <Link to="/dashboard/profile">
-                            <Card className="w-32 lg:w-56 h-20 flex items-center justify-center bg-[#1d355e]">
+                            <Card className="w-28 sm:w-32 lg:w-56 h-20 flex items-center justify-center bg-[#1d355e]">
                                 <CardBody>
-                                    <p className="text-white font-bold tracking-widest">
+                                    <p className="sm:text-[16px] text-sm  text-white font-bold tracking-widest">
                                         Profile
                                     </p>
                                 </CardBody>
@@ -72,9 +72,9 @@ const DashboardNav = () => {
                     </div>
                     <div>
                         <Link to="/dashboard/transaction">
-                            <Card className="w-32 lg:w-56 h-20 flex items-center justify-center bg-[#1d355e]">
+                            <Card className="w-28 sm:w-32 lg:w-56 h-20 flex items-center justify-center bg-[#1d355e]">
                                 <CardBody>
-                                    <p className="text-white font-bold tracking-widest">
+                                    <p className="sm:text-[16px] text-sm text-white font-bold tracking-widest">
                                         Transaction
                                     </p>
                                 </CardBody>
@@ -84,9 +84,9 @@ const DashboardNav = () => {
                     {user?.role === "admin" && (
                         <div>
                             <Link to="/dashboard/users">
-                                <Card className="w-32 lg:w-56 h-20 flex items-center justify-center bg-[#1d355e]">
+                                <Card className="w-28 sm:w-32 lg:w-56 h-20 flex items-center justify-center bg-[#1d355e]">
                                     <CardBody>
-                                        <p className="text-white font-bold tracking-widest">
+                                        <p className="sm:text-[16px] text-sm text-white font-bold tracking-widest">
                                             Users
                                         </p>
                                     </CardBody>
@@ -97,10 +97,10 @@ const DashboardNav = () => {
                     <div>
                         <Card
                             onClick={handleSignOut}
-                            className="w-32 lg:w-56 h-20 flex items-center justify-center bg-[#1d355e] cursor-pointer"
+                            className="w-28 sm:w-32 lg:w-56 h-20 flex items-center justify-center bg-[#1d355e] cursor-pointer"
                         >
                             <CardBody>
-                                <p className="text-white font-bold tracking-widest">
+                                <p className="sm:text-[16px] text-sm text-white font-bold tracking-widest">
                                     Log Out
                                 </p>
                             </CardBody>

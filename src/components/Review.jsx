@@ -126,7 +126,7 @@ const Review = () => {
     useEffect(() => {
         auth?.currentUser &&
             fetch(
-                `http://localhost:5000/api/user/${auth?.currentUser?.email}`,
+                `https://server.patagoniaexplore.com/api/user/${auth?.currentUser?.email}`,
                 {
                     method: "GET",
                     headers: {
@@ -193,7 +193,7 @@ const Review = () => {
             review: formData?.review,
         };
 
-        fetch("http://localhost:5000/apgit i/create-review", {
+        fetch("https://server.patagoniaexplore.com/api/create-review", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
