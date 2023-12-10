@@ -5,6 +5,7 @@ import {
     createUserWithEmailAndPassword,
     signInWithPopup,
     signInWithEmailAndPassword,
+    sendEmailVerification,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -25,8 +26,8 @@ const LoginPage = () => {
     };
 
     const handleReset = () => {
-        navigate("/reset-password")
-    }
+        navigate("/reset-password");
+    };
 
     const handleSocialLogin = async (provider) => {
         const response = await signInWithPopup(auth, provider);
@@ -56,7 +57,12 @@ const LoginPage = () => {
         try {
             if (isContainerActive) {
                 await createUserWithEmailAndPassword(auth, email, password)
-                    .then(() => {
+                    .then((userCredential) => {
+                        const user = userCredential.user;
+
+                        
+                        sendEmailVerification(user);
+
                         fetch(
                             "https://server.patagoniaexplore.com/api/signup",
                             {
@@ -78,6 +84,7 @@ const LoginPage = () => {
                                     data.token,
                                 );
                             });
+                        toast("Account created. Please check your email for verification.");
                         navigate("/");
                     })
                     .catch((error) => {
@@ -85,7 +92,15 @@ const LoginPage = () => {
                     });
             } else {
                 await signInWithEmailAndPassword(auth, email, password)
-                    .then(() => {
+                    .then((userCredential) => {
+                        const user = userCredential.user;
+
+                       
+                        if (user && !user.emailVerified) {
+                            toast("Please verify your email before signing in.");
+                            return;
+                        }
+
                         fetch(
                             "https://server.patagoniaexplore.com/api/signin",
                             {
@@ -100,7 +115,7 @@ const LoginPage = () => {
                         )
                             .then((res) => res.json())
                             .then((data) => {
-                                console.log(data)
+                                
                                 localStorage.setItem(
                                     "travel-token",
                                     data.token,
