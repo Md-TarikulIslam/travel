@@ -18,6 +18,7 @@ import ErrorPage from "../pages/ErrorPage";
 import RefundPolicy from "../components/RefundPolicy";
 import  AllReviews  from "../components/AllReviews";
 import Payment from "../pages/Payment";
+import ResetPassword from "../pages/ResetPassword";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <LoginPage />,
+            },
+            {
+                path: "/reset-password",
+                element: <ResetPassword />
             },
             {
                 path: "/about",
