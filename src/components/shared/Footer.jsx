@@ -19,8 +19,8 @@ const Footer = () => {
       <div className="text-white max-width px-4 md:h-[85vh] flex flex-col justify-center">
         <div className="flex flex-col md:flex-row gap-5 justify-between sm:w-[80%] mx-auto  border border-[#ffffff1a] py-5 md:px-10 px-5 rounded-md md:w-full w-full mt-10">
           <div className="flex items-center">
-            <div className="bg-[#2095ae] min-w-[65px] rounded-md min-h-[65px] mr-4 flex items-center justify-center">
-              <FiPhoneCall className="text-4xl" />
+            <div className="bg-[#2095ae] sm:min-w-[65px] min-w-[55px] rounded-md min-h-[55px] sm:min-h-[65px] mr-4 flex items-center justify-center">
+              <FiPhoneCall className="sm:text-4xl text-2xl" />
             </div>
             <div>
               <h6 className="text-[16px] font-semibold">Call us</h6>
@@ -31,20 +31,20 @@ const Footer = () => {
           </div>
           <p className="md:border-r border-r-[#ffffff1a] border-b border-b-[#ffffff1a] md:w-auto w-full"></p>
           <div className="flex items-center">
-            <div className="bg-[#2095ae] min-w-[65px] rounded-md min-h-[65px] mr-4 flex items-center justify-center">
-              <TfiEmail className="text-4xl" />
+            <div className="bg-[#2095ae] md:min-w-[65px] min-w-[55px] rounded-md md:min-h-[65px] min-h-[55px] mr-4 flex items-center justify-center">
+              <TfiEmail className="sm:text-4xl text-2xl" />
             </div>
             <div>
               <h6 className="text-[16px] font-semibold">Write to us</h6>
-              <p className="text-[#ffffffcc] mt-1">
+              <p className="text-[#ffffffcc] mt-1 md:text-[16px] text-[14px]">
                 <a href="mailto:patagoniaexpeditionss@gmail.com">patagoniaexpeditionss@gmail.com</a>
               </p>
             </div>
           </div>
           <p className="md:border-r border-r-[#ffffff1a] border-b border-b-[#ffffff1a] md:w-auto w-full"></p>
           <div className="flex items-center">
-            <div className="bg-[#2095ae] min-w-[65px] min-h-[65px] rounded-md mr-4 flex items-center justify-center">
-              <SlLocationPin size={35} className="text-4x" />
+            <div className="bg-[#2095ae] md:min-w-[65px] min-w-[55px] md:min-h-[65px] min-h-[55px] rounded-md mr-4 flex items-center justify-center">
+              <SlLocationPin className="sm:text-4xl text-2xl" />
             </div>
             <div>
               <h6 className="text-[16px] font-semibold">Address</h6>
