@@ -20,7 +20,7 @@ export default function DashTransaction() {
     const [user, setUser] = useState({});
 
     useEffect(() => {
-        fetch(`https://server.patagoniaexplore.com/api/user/${auth.currentUser?.email}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/user/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "content-type": "application/json",
@@ -34,7 +34,7 @@ export default function DashTransaction() {
     }, []);
 
     if (user?.role === "admin") {
-        fetch("https://server.patagoniaexplore.com/api/orders", {
+        fetch("${import.meta.env.VITE_API_URL}/api/orders", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export default function DashTransaction() {
             .then((response) => response.json())
             .then((data) => setOrders(data));
     } else {
-        fetch(`https://server.patagoniaexplore.com/api/order/${auth.currentUser?.email}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/order/${auth.currentUser?.email}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export default function DashTransaction() {
             refundStatus: "refund",
         };
 
-        fetch(`https://server.patagoniaexplore.com/api/orders/update-order`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/orders/update-order`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -81,7 +81,7 @@ export default function DashTransaction() {
             refundStatus: "refunded",
         };
 
-        fetch(`https://server.patagoniaexplore.com/api/orders/update-order`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/orders/update-order`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

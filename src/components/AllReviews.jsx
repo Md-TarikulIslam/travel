@@ -133,7 +133,7 @@ export default function AllReviews() {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`https://server.patagoniaexplore.com/api/reviews`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/reviews`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

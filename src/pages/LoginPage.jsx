@@ -38,7 +38,7 @@ const LoginPage = () => {
             avatar: response?.user?.photoURL,
         };
 
-        fetch("https://server.patagoniaexplore.com/api/signup", {
+        fetch(`${import.meta.env.VITE_API_URL}/api/signup`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -64,7 +64,7 @@ const LoginPage = () => {
                         sendEmailVerification(user);
 
                         fetch(
-                            "https://server.patagoniaexplore.com/api/signup",
+                            "${import.meta.env.VITE_API_URL}/api/signup",
                             {
                                 method: "POST",
                                 headers: {
@@ -102,7 +102,7 @@ const LoginPage = () => {
                         }
 
                         fetch(
-                            "https://server.patagoniaexplore.com/api/signin",
+                            "${import.meta.env.VITE_API_URL}/api/signin",
                             {
                                 method: "POST",
                                 headers: {

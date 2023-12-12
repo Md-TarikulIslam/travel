@@ -6,7 +6,7 @@ const TABLE_HEAD = ["Name", "Email", "Phone", "Address", "Action"];
 export default function DashUsers() {
     const [users, setUsers] = useState([]);
 
-    fetch("https://server.patagoniaexplore.com/api/users", {
+    fetch(`${import.meta.env.VITE_API_URL}/api/users`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
