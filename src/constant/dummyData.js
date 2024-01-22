@@ -671,7 +671,7 @@ export const toursCardData = [
         country: "Uruguay",
         title: "Colonia del Sacramento",
         place: "Colonia del Sacramento, Uruguay",
-        expense: 330,
+        expense: 1495,
         shortDesq: `Colonia del Sacramento is known for its Barrio Histórico, an impeccably-preserved colonial quarter with a rich and tumultuous history.`,
         day: 5,
         person: 12,
