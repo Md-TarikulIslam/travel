@@ -19,6 +19,7 @@ import RefundPolicy from "../components/RefundPolicy";
 import  AllReviews  from "../components/AllReviews";
 import Payment from "../pages/Payment";
 import ResetPassword from "../pages/ResetPassword";
+import BookNowPage from "../pages/BookNowPage";
 
 const router = createBrowserRouter([
     {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
             {
                 path: "/destination/:id",
                 element: <CardDetailsPage />,
+            },
+            {
+                path: "/destination/book-now/:id",
+                element: <BookNowPage />,
             },
             {
                 path: "/gallery",
