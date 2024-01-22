@@ -64,7 +64,7 @@ const LoginPage = () => {
                         sendEmailVerification(user);
 
                         fetch(
-                            "${import.meta.env.VITE_API_URL}/api/signup",
+                            `${import.meta.env.VITE_API_URL}/api/signup`,
                             {
                                 method: "POST",
                                 headers: {
@@ -102,7 +102,7 @@ const LoginPage = () => {
                         }
 
                         fetch(
-                            "${import.meta.env.VITE_API_URL}/api/signin",
+                            `${import.meta.env.VITE_API_URL}/api/signin`,
                             {
                                 method: "POST",
                                 headers: {

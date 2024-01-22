@@ -59,7 +59,7 @@ const CheckoutForm = () => {
                     setAmount("");
                     setPaymentError(null);
 
-                    fetch("${import.meta.env.VITE_API_URL}/api/create-order", {
+                    fetch(`${import.meta.env.VITE_API_URL}/api/create-order`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const CheckoutForm = () => {
                         .then((res) => res.json())
                         .then((data) => {
                             navigate("/payment-success");
-                            fetch("${import.meta.env.VITE_API_URL}/api/send-email", {
+                            fetch(`${import.meta.env.VITE_API_URL}/api/send-email`, {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json",
