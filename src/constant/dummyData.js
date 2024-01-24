@@ -765,4 +765,41 @@ export const toursCardData = [
             
         ],
     },
+    {
+        id: "Dummy-card",
+        country: "dummy",
+        title: "it's just for checking",
+        place: "",
+        expense: 1,
+        shortDesq: ``,
+        day: 5,
+        person: 12,
+        ratings: "8.0 Impressive",
+        payment_link: "link7",
+        details: {
+            desq1: ``,
+            desq2: ``,
+            duration: "5 Days 4 Nights",
+            departure: "NYC International Airport",
+            departureTime: "7.00AM",
+            ReturnTime: "9.30PM",
+            priceIncludes: [
+                "Accommondation",
+                "Porter & Personal Guide",
+                "Insurance",
+                "Breakfast",
+                "Tranportation / Car",
+            ],
+            priceExcludes: [
+                "Flights",
+                "Lunch",
+                "Typical Souvenir",
+                "Sunscreen",
+                "Toiletries and personal items",
+            ],
+            mapImg: map6,
+            
+        },
+        
+    },
 ];

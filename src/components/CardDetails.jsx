@@ -84,7 +84,7 @@ const CardDetails = ({ details }) => {
                     <div className="grid grid-cols-2 gap-x-6 gap-y-6 mb-8 py-5">
                         <p className="flex items-center text-[#676977]">
                             <BsClock className="mr-1 text-lg text-[#2095AE]" />
-                            {details?.details.duration}
+                            {details?.details?.duration}
                         </p>
                         <p className="flex items-center text-[#676977]">
                             <MdOutlinePersonOutline className="mr-1 text-2xl text-[#2095AE]" />
@@ -281,7 +281,7 @@ const CardDetails = ({ details }) => {
                     Full Itinerary :
                 </h3>
                 <Timeline className="sm:ml-10 grid md:grid-cols-2">
-                    {details?.itenary.map((data) => (
+                    {details?.itenary?.map((data) => (
                         <TimelineItem key={data.id}>
                             <TimelineConnector />
                             <TimelineHeader className="h-3">
