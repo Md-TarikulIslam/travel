@@ -17,7 +17,7 @@ export default function DashUsers() {
         .then((data) => setUsers(data));
 
     return (
-        <Card className="h-full w-full overflow-scroll md:overflow-hidden">
+        <Card className="h-full w-full overflow-auto">
             <table className="w-full min-w-max table-auto text-left">
                 <thead>
                     <tr>
